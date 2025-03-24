@@ -6,7 +6,6 @@ Welcome to my GitHub repository! This is where I store and share all kinds of pr
 This repository is a collection of my coding projects, experiments, and learning exercises. The projects cover multiple topics, including:
 - 🖥️ **C# Applications** – Console apps, utilities, and game-related scripts.
 - 🎮 **Game Development** – Unity projects, AI movement, and gameplay mechanics.
-- 🌐 **Web Development** – HTML, CSS, and web-related experiments.
 - 📝 **Other Random Projects** – Anything else that I find interesting!
 
 ## 🛠️ Technologies I Use
