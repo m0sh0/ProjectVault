@@ -1,0 +1,16 @@
+.env
+
+bin/
+obj/
+
+*.log
+.vscode/
+.idea/
+*.suo
+*.user
+*.exe
+*.dll
+
+
+.vs/
+*.csproj.user
