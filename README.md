@@ -20,7 +20,7 @@ I'm a beginner programmer currently learning the fundamentals of programming, fo
 ## 📬 Let's Connect
 If you have any suggestions, ideas, or just want to chat about coding, feel free to connect!
 - 🐙 **GitHub:** [](https://github.com/m0sh0)
-- 💬 **Discord:** [_mosho_]
+- 💬 **Discord:** _mosho_
 
 ---
 💡 *Feel free to explore, use, and contribute to any project in this repo!*
