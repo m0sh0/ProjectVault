@@ -58,165 +58,202 @@ internal class PatternDrawing
             switch (choice)
             {
                 case 1: // Right-angled Triangle
-                    for (int i = 0; i <= rows; i++)
-                    {
-                        for (int j = 0; j <= i; j++)
-                        {
-                            Console.Write("*");
-                        }
-                        Console.Write("\n");
-                    }
+                    PrintRightAngledTriangle(rows);
+
                     restart = false;
                     break;
 
                 case 2: // Square with Hollow Center
-                    for (int i = 0; i < rows; i++)
-                    {
-                        for (int j = 0; j < rows; j++)
-                        {
-                            if (i == 0 || i == rows - 1 || j == 0 || j == rows - 1)
-                            {
-                                Console.Write("* ");
-                            }
-                            else
-                            {
-                                Console.Write("  ");
-                            }
-                        }
-                        Console.WriteLine();
-                    }
+                    PrintSquareWithHollowCenter(rows);
+
                     restart = false;
                     break;
 
                 case 3: // Diamond
-                    for (int i = 0; i <= rows; i++)
-                    {
-                        for (int j = 1; j <= rows - i; j++)
-                        {
-                            Console.Write(" ");
-                        }
+                    PrintDiamond(rows);
 
-                        for (int j = 1; j <= 2 * i - 1; j++)
-                        {
-                            Console.Write("*");
-                        }
-
-                        Console.Write("\n");
-                    }
-
-                    for (int i = rows - 1; i >= 1; i--)
-                    {
-                        for (int j = 1; j <= rows - i; j++)
-                        {
-                            Console.Write(" ");
-                        }
-
-                        for (int j = 1; j <= 2 * i - 1; j++)
-                        {
-                            Console.Write("*");
-                        }
-
-                        Console.Write("\n");
-                    }
                     restart = false;
                     break;
 
                 case 4: // Left-angled Triangle
+                    PrintLeftAngledTriangle(rows);
 
-                    for (int i = 0; i <= rows; i++)
-                    {
-                        for (int j = rows; j >= i; j--)
-                        {
-                            Console.Write("*");
-                        }
-                        Console.Write("\n");
-                    }
                     restart = false;
                     break;
 
                 case 5: // Pyramid
-                    for (int i = 1; i <= rows; i++)
-                    {
-                        for (int x = i; x <= rows; x++)
-                        {
-                            Console.Write(" ");
-                        }
-                        for (int j = 1; j <= i; j++)
-                        {
-                            Console.Write("*" + " ");
-                        }
-                        Console.WriteLine();
-                    }
+                    PrintPyramid(rows);
+
                     restart = false;
                     break;
 
                 case 6: //  Reverse pyramid
-                    for (int i = rows; i >= 0; i--)
-                    {
-                        for (int x = i; x <= rows; x++)
-                        {
-                            Console.Write(" ");
-                        }
-                        for (int j = 1; j <= i; j++)
-                        {
-                            Console.Write("*" + " ");
-                        }
-                        Console.WriteLine();
-                    }
+                    PrintReversePyramid(rows);
+
                     restart = false;
                     break;
 
                 case 7: // Heart
-                    for (int i = rows / 2; i <= rows; i += 2)
-                    {
-                        for (int j = 1; j < rows - i; j += 2)
-                        {
-                            Console.Write(" ");
-                        }
+                    PrintHeart(rows);
 
-                        for (int j = 1; j <= i; j++)
-                        {
-                            Console.Write("*");
-                        }
-
-                        for (int j = 1; j <= rows - i; j++)
-                        {
-                            Console.Write(" ");
-                        }
-
-                        for (int j = 1; j <= i; j++)
-                        {
-                            Console.Write("*");
-                        }
-
-                        Console.WriteLine();
-                    }
-
-                    for (int i = rows; i >= 1; i--)
-                    {
-                        for (int j = i; j < rows; j++)
-                        {
-                            Console.Write(" ");
-                        }
-
-                        for (int j = 1; j <= (i * 2) - 1; j++)
-                        {
-                            Console.Write("*");
-                        }
-
-                        Console.WriteLine();
-                    }
                     restart = false;
-                    break;
-
-                case 8: // Rectangle with Hollow Center
-                    // TODO: Use nested loops to create a rectangle with a hollow center
                     break;
 
                 default:
                     Console.WriteLine("❌ Invalid choice! Please restart the program.");
                     break;
             }
+        }
+    }
+
+    private static void PrintRightAngledTriangle(int rows)
+    {
+        for (int i = 0; i <= rows; i++)
+        {
+            for (int j = 0; j <= i; j++)
+            {
+                Console.Write("*");
+            }
+            Console.Write("\n");
+        }
+    }
+
+    private static void PrintSquareWithHollowCenter(int rows)
+    {
+        for (int i = 0; i < rows; i++)
+        {
+            for (int j = 0; j < rows; j++)
+            {
+                if (i == 0 || i == rows - 1 || j == 0 || j == rows - 1)
+                {
+                    Console.Write("* ");
+                }
+                else
+                {
+                    Console.Write("  ");
+                }
+            }
+            Console.WriteLine();
+        }
+    }
+
+    private static void PrintDiamond(int rows)
+    {
+        for (int i = 0; i <= rows; i++)
+        {
+            for (int j = 1; j <= rows - i; j++)
+            {
+                Console.Write(" ");
+            }
+
+            for (int j = 1; j <= 2 * i - 1; j++)
+            {
+                Console.Write("*");
+            }
+
+            Console.Write("\n");
+        }
+
+        for (int i = rows - 1; i >= 1; i--)
+        {
+            for (int j = 1; j <= rows - i; j++)
+            {
+                Console.Write(" ");
+            }
+
+            for (int j = 1; j <= 2 * i - 1; j++)
+            {
+                Console.Write("*");
+            }
+
+            Console.Write("\n");
+        }
+    }
+
+    private static void PrintLeftAngledTriangle(int rows)
+    {
+        for (int i = 0; i <= rows; i++)
+        {
+            for (int j = rows; j >= i; j--)
+            {
+                Console.Write("*");
+            }
+            Console.Write("\n");
+        }
+    }
+
+    private static void PrintPyramid(int rows)
+    {
+        for (int i = 1; i <= rows; i++)
+        {
+            for (int x = i; x <= rows; x++)
+            {
+                Console.Write(" ");
+            }
+            for (int j = 1; j <= i; j++)
+            {
+                Console.Write("*" + " ");
+            }
+            Console.WriteLine();
+        }
+    }
+
+    private static void PrintReversePyramid(int rows)
+    {
+        for (int i = rows; i >= 0; i--)
+        {
+            for (int x = i; x <= rows; x++)
+            {
+                Console.Write(" ");
+            }
+            for (int j = 1; j <= i; j++)
+            {
+                Console.Write("*" + " ");
+            }
+            Console.WriteLine();
+        }
+    }
+
+    private static void PrintHeart(int rows)
+    {
+        for (int i = rows / 2; i <= rows; i += 2)
+        {
+            for (int j = 1; j < rows - i; j += 2)
+            {
+                Console.Write(" ");
+            }
+
+            for (int j = 1; j <= i; j++)
+            {
+                Console.Write("*");
+            }
+
+            for (int j = 1; j <= rows - i; j++)
+            {
+                Console.Write(" ");
+            }
+
+            for (int j = 1; j <= i; j++)
+            {
+                Console.Write("*");
+            }
+
+            Console.WriteLine();
+        }
+
+        for (int i = rows; i >= 1; i--)
+        {
+            for (int j = i; j < rows; j++)
+            {
+                Console.Write(" ");
+            }
+
+            for (int j = 1; j <= (i * 2) - 1; j++)
+            {
+                Console.Write("*");
+            }
+
+            Console.WriteLine();
         }
     }
 }
