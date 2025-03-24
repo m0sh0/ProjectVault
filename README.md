@@ -1,4 +1,4 @@
-# 🚀 Mihail's Project Hub
+# 🚀 Mihail's Project Vault
 
 Welcome to my GitHub repository! This is where I store and share all kinds of projects as I continue learning and building cool things. From simple beginner scripts to more complex applications, you'll find a variety of code here. 💻
 
