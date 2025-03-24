@@ -7,7 +7,7 @@ internal class PatternDrawing
         bool restart = true;
         while (restart) // Loop for restarting the program
         {
-            // Step 1: Display a menu to the user
+            // Display a menu to the user
             Console.WriteLine("Welcome to the C# Pattern Drawing Program!");
             Console.WriteLine("Choose a pattern type:");
             Console.WriteLine("1. Right-angled Triangle");
@@ -19,11 +19,11 @@ internal class PatternDrawing
             Console.WriteLine("7. Heart");
             Console.WriteLine("8. Rectangle with Hollow Center");
 
-            // Step 2: Get the user's choice
+            // Get the user's choice
             Console.Write("Enter the number corresponding to your choice: ");
             int choice = int.Parse(Console.ReadLine());
 
-            // Step 3: Get dimensions based on choice
+            // Get dimensions based on choice
             int rows = 0, width = 0, height = 0;
             if (choice >= 1 && choice <= 7)
             {
@@ -54,7 +54,7 @@ internal class PatternDrawing
                 }
             }
 
-            // Step 4: Generate the selected pattern
+            // Generate the selected pattern
             switch (choice)
             {
                 case 1: // Right-angled Triangle
