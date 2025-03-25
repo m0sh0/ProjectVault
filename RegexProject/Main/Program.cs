@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Text.RegularExpressions;
 
+// Hello! My email is student123@gmail.com and my phone number is +359 888-123-456.
 class RegexProject
 {
     // Method to find email in a given text
@@ -25,7 +26,7 @@ class RegexProject
 
     static void Main()
     {
-        string text = "Hello! My email is student123@gmail.com and my phone number is +359 888-123-456.";
+        string text = Console.ReadLine();
         Console.WriteLine(FindEmail(text)); 
     }
 }
