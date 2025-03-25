@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.13.35825.156 d17.13
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExtractEmailFromText", "Main\ExtractEmailFromText.csproj", "{F68B8BD2-E8D1-4074-B5EB-2578B67CB305}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExtractMultipleEmailsAndPhoneNumbers", "ExtractMultipleEmailsAndPhoneNumbers\ExtractMultipleEmailsAndPhoneNumbers.csproj", "{8269DF30-215D-4E85-ABD4-E6EFC3835D25}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F68B8BD2-E8D1-4074-B5EB-2578B67CB305}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F68B8BD2-E8D1-4074-B5EB-2578B67CB305}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F68B8BD2-E8D1-4074-B5EB-2578B67CB305}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F68B8BD2-E8D1-4074-B5EB-2578B67CB305}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8269DF30-215D-4E85-ABD4-E6EFC3835D25}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8269DF30-215D-4E85-ABD4-E6EFC3835D25}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8269DF30-215D-4E85-ABD4-E6EFC3835D25}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8269DF30-215D-4E85-ABD4-E6EFC3835D25}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {7F4FDE4A-6254-4437-9A55-D4873FE46250}
+	EndGlobalSection
+EndGlobal
