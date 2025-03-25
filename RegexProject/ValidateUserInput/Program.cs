@@ -1,6 +1,12 @@
 ﻿using System;
 using System.Text.RegularExpressions;
+/*
+user@domain.com
+invalid-email
 
+Secure123!
+weakpass
+ */
 class RegexProject
 {
     public static bool ValidateEmail(string email)
@@ -64,10 +70,10 @@ class RegexProject
         while (p == 0)
         {
             Console.WriteLine("Enter a password. A strong password must:");
-            Console.WriteLine("-> Be at least 8 characters long");
-            Console.WriteLine("-> Contain one uppercase letter");
-            Console.WriteLine("-> Contain one number");
-            Console.WriteLine("-> Contain one special character (@$!%*?&)");
+            Console.WriteLine(">>> Be at least 8 characters long");
+            Console.WriteLine(">>> Contain one uppercase letter");
+            Console.WriteLine(">>> Contain one number");
+            Console.WriteLine(">>> Contain one special character (@$!%*?&)");
 
             Console.Write("-> ");
             string password = Console.ReadLine();
@@ -82,11 +88,6 @@ class RegexProject
                 Console.WriteLine($"The password [{password}] is invalid!");
             }
         }
-    
-
-
-
         
-
     }
 }
