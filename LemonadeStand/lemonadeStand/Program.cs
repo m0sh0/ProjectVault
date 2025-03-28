@@ -25,71 +25,87 @@ namespace lemonadeStand
     {
         static void Main(string[] args)
         {
+            Console.WriteLine("Welcome to my lemonade stand! Please insert 5$, 10$, or 20$ bills.");
             List<int> bills = new();
-            
 
             while (true)
             {
-                int order = int.Parse(Console.ReadLine());
-
-                if (order == 5)
+                Console.Write("=> ");
+                int order;
+                if (!int.TryParse(Console.ReadLine(), out order))
                 {
-                    bills.Add(5);
-                }
-
-                else if (order == 10)
-                {
-                    bills.Add(10);
-
-                    for (int i = 0; i < bills.Count; i++)
-                    {
-                        if (bills[i] == 5)
-                        {
-                            bills.RemoveAt(i);
-                            break;
-                        }
-                    }
-                }
-
-                else if (order == 20)
-                {
-                    List<int> billsToRemove = new();
-                    bills.Add(20);
-
-                    for (int i = 0; i < bills.Count; i++)
-                    {
-                        for (int j = 1; j < bills.Count; j++)
-                        {
-                            if (bills[i] + bills[j] == 15)
-                            {
-                                billsToRemove.Add(bills[i]);
-                                billsToRemove.Add(bills[j]);
-
-                                break;
-                            }
-
-                            for (int k = 3; k < bills.Count; k++)
-                            {
-                                if (bills[i] + bills[j] + bills[k] == 15)
-                                {
-                                    billsToRemove.Add(bills[i]);
-                                    billsToRemove.Add(bills[j]);
-                                    billsToRemove.Add(bills[k]);
-
-                                    break;
-                                }
-
-                            }
-                        }
-
-                        break;
-                    }
-
-                    foreach (int bill in billsToRemove)
-                    {
-                        bills.Remove(bill);
-                    }
                     break;
+                }
+
+                if (order != 5 && order != 10 && order != 20)
+                {
+                    Console.WriteLine("Please insert 5$, 10$, or 20$ bills.");
+                    continue;
+                }
+
+                if (!CanProvideChange(order, bills))
+                {
+                    Console.WriteLine("Sorry we don't have enough change :(");
+                    break;
+                }
+
+                UpdateBills(order, bills);
+
+            }
+        }
+
+        static bool CanProvideChange(int payment, List<int> bills)
+        {
+            if (payment == 5)
+            {
+                return true;
+            }
+
+            else if (payment == 10)
+            {
+                return bills.Contains(5);
+            }
+
+            else if (payment == 20)
+            {
+                if (bills.Contains(5) && bills.Contains(10))
+                {
+                    return true;
+                }
+                else if (bills.Count(b => b == 5) >= 3)
+                {
+                    return true;
+                }
+            }
+
+            return false;
+        }
+        static void UpdateBills(int payment, List<int> bills)
+        {
+            if (payment == 5)
+            {
+                bills.Add(5);
+            }
+
+            else if (payment == 10)
+            {
+                bills.Add(10);
+                bills.Remove(5);
+            }
+
+            else if (payment == 20)
+            {
+                bills.Add(20);
+                if (bills.Contains(10) && bills.Contains(5))
+                {
+                    bills.Remove(10);
+                    bills.Remove(5);
+                }
+                else if (bills.Count(b => b == 5) >= 3)
+                {
+                    bills.Remove(5);
+                    bills.Remove(5);
+                    bills.Remove(5);
                 }
             }
         }
