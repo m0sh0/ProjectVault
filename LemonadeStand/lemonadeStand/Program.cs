@@ -2,23 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel.Design;
 using System.Linq;
-/*
-5
-5
-5
-20
 
-5
-5
-5
-10
-20
-
-5
-5
-10
-20
- */
 namespace lemonadeStand
 {
     internal class Program
