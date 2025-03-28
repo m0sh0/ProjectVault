@@ -14,6 +14,7 @@ namespace lemonadeStand
 
             while (true)
             {
+                // Get user order
                 Console.Write("=> ");
                 int order;
                 if (!int.TryParse(Console.ReadLine(), out order))
@@ -21,12 +22,14 @@ namespace lemonadeStand
                     break;
                 }
 
+                // Check if order is valid
                 if (order != 5 && order != 10 && order != 20)
                 {
                     Console.WriteLine("Please insert 5$, 10$, or 20$ bills.");
                     continue;
                 }
 
+                // Check if we have enough change
                 if (!CanProvideChange(order, bills))
                 {
                     Console.WriteLine("Sorry we don't have enough change :(");
@@ -38,6 +41,7 @@ namespace lemonadeStand
             }
         }
 
+        // Method for checking if we have enough change
         static bool CanProvideChange(int payment, List<int> bills)
         {
             if (payment == 5)
@@ -64,6 +68,8 @@ namespace lemonadeStand
 
             return false;
         }
+
+        // Method for updating the bills list
         static void UpdateBills(int payment, List<int> bills)
         {
             if (payment == 5)
