@@ -13,6 +13,11 @@ using System.Linq;
 5
 10
 20
+
+5
+5
+10
+20
  */
 namespace lemonadeStand
 {
@@ -21,6 +26,7 @@ namespace lemonadeStand
         static void Main(string[] args)
         {
             List<int> bills = new();
+            
 
             while (true)
             {
@@ -47,31 +53,42 @@ namespace lemonadeStand
 
                 else if (order == 20)
                 {
+                    List<int> billsToRemove = new();
                     bills.Add(20);
 
-                    foreach (int bill1 in bills)
+                    for (int i = 0; i < bills.Count; i++)
                     {
-                        foreach (int bill2 in bills)
+                        for (int j = 1; j < bills.Count; j++)
                         {
-                            if (bill1 + bill2 == 15)
+                            if (bills[i] + bills[j] == 15)
                             {
-                                bills.Remove(bill1);
-                                bills.Remove(bill2);
-                                break; 
+                                billsToRemove.Add(bills[i]);
+                                billsToRemove.Add(bills[j]);
+
+                                break;
                             }
 
-                            foreach (int bill3 in bills)
+                            for (int k = 3; k < bills.Count; k++)
                             {
-                                if (bill1 + bill2 + bill3 == 15)
+                                if (bills[i] + bills[j] + bills[k] == 15)
                                 {
-                                    bills.Remove(bill1);
-                                    bills.Remove(bill2);
-                                    bills.Remove(bill3);
+                                    billsToRemove.Add(bills[i]);
+                                    billsToRemove.Add(bills[j]);
+                                    billsToRemove.Add(bills[k]);
+
                                     break;
                                 }
+
                             }
                         }
-                    } 
+
+                        break;
+                    }
+
+                    foreach (int bill in billsToRemove)
+                    {
+                        bills.Remove(bill);
+                    }
                     break;
                 }
             }
