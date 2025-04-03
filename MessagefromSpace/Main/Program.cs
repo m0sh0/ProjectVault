@@ -34,20 +34,21 @@ namespace Main
                 string[] parts = input.Split(new char[] { '[', ']' }, StringSplitOptions.RemoveEmptyEntries)
                     .ToArray();
 
-                // StringBiulder for the final message
-                StringBuilder message = new();
-
-                // Method for decrypting the message
-                DecryptSpaceMessage(parts, message);
-
+                
+                
                 // Print the final message
-                Console.WriteLine($"Your message is: {message.ToString().ToUpper()}");
+                Console.WriteLine($"Your message is: {DecryptSpaceMessage(parts)}");
+                Console.WriteLine();
             }
      
         }
 
-        private static void DecryptSpaceMessage(string[] parts, StringBuilder message)
+        // Method for decrypting the message
+        private static string DecryptSpaceMessage(string[] parts)
         {
+            // StringBiulder for the final message
+            StringBuilder message = new();
+
             // Loop through the parts of the message
             for (int i = 0; i < parts.Length; i++)
             {
@@ -89,6 +90,9 @@ namespace Main
                 }
 
             }
+
+            // Return the final message
+            return message.ToString().ToUpper();
         }
     }
 }
