@@ -16,20 +16,20 @@ The encrypted message consists of **capital letters, numbers, and brackets**. To
 
 ## 🧩 Examples
 
-```python
-spaceMessage("ABCD")
-# Output: "ABCD"
+```csharp
+Console.WriteLine(SpaceMessage("ABCD"));
+// Output: "ABCD"
 
-spaceMessage("AB[3CD]")
-# Breakdown:
-# - "AB" → "AB"
-# - "[3CD]" → "CDCDCD"
-# - Combined → "ABCDCDCD"
-# Output: "ABCDCDCD"
+Console.WriteLine(SpaceMessage("AB[3CD]"));
+// Breakdown:
+// - "AB" → "AB"
+// - "[3CD]" → "CDCDCD"
+// - Combined → "ABCDCDCD"
+// Output: "ABCDCDCD"
 
-spaceMessage("IF[2E]LG[5O]D")
-# Breakdown:
-# - "[2E]" → "EE"
-# - "[5O]" → "OOOOO"
-# - Combined → "IFEELGOOOOOD"
-# Output: "IFEELGOOOOOD"
+Console.WriteLine(SpaceMessage("IF[2E]LG[5O]D"));
+// Breakdown:
+// - "[2E]" → "EE"
+// - "[5O]" → "OOOOO"
+// - Combined → "IFEELGOOOOOD"
+// Output: "IFEELGOOOOOD"
