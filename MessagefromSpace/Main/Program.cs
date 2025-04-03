@@ -4,6 +4,8 @@ using System.Linq;
 using System.Text;
 
 /*
+ Test cases:
+
 AB[3CD]
 IF[2E]LG[5O]D
 */
@@ -13,21 +15,35 @@ namespace Main
     {
         static void Main(string[] args)
         {
-            // Get input from the user
-            string input = Console.ReadLine();
+            while (true)
+            {
+                Console.WriteLine("Enter your space message (type \"Exit\" if you want to exit the program)");
+                Console.Write("your space message here >>>  ");
 
-            //Extracting the blocks with brackets
-            string[] parts = input.Split(new char[]{'[' , ']'}, StringSplitOptions.RemoveEmptyEntries)
-                .ToArray();
+                // Get input from the user
+                string input = Console.ReadLine();
 
-            // StringBiulder for the final message
-            StringBuilder message = new();
+                // Check if the user wants to exit
+                if (input == "Exit")
+                {
+                    Console.WriteLine("See you next time!");
+                    break;
+                }
 
-            // Method for decrypting the message
-            DecryptSpaceMessage(parts, message);
+                //Extracting the blocks with brackets
+                string[] parts = input.Split(new char[] { '[', ']' }, StringSplitOptions.RemoveEmptyEntries)
+                    .ToArray();
 
-            // Print the final message
-            Console.WriteLine(message.ToString().ToUpper());
+                // StringBiulder for the final message
+                StringBuilder message = new();
+
+                // Method for decrypting the message
+                DecryptSpaceMessage(parts, message);
+
+                // Print the final message
+                Console.WriteLine($"Your message is: {message.ToString().ToUpper()}");
+            }
+     
         }
 
         private static void DecryptSpaceMessage(string[] parts, StringBuilder message)
