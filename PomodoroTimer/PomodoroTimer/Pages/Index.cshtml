@@ -1,0 +1,135 @@
+﻿@page
+@using System.Runtime.InteropServices.JavaScript
+@model IndexModel
+@{
+	ViewData["Title"] = "Pomodoro";
+}
+
+<!-- title -->
+<div class="general">
+	<h1 id="title">
+		PomoMih
+		<div class="underline"></div>
+	</h1>
+</div>
+
+<!--timer-->
+<p class="general" id="timer"></p>
+
+<!--start button-->
+<button class="button" type="button" id="start-button" onClick="Start()">
+	Start
+</button>
+
+<!--reset button-->
+<button class="button" type="button" id="reset-button" onClick="Reset()">
+	Reset
+</button>
+
+
+<script>
+
+	// variables for the timer
+
+	let minutes = 25;
+	let seconds = 0;
+	let timer = null;
+
+	// display the timer
+	document.getElementById("timer").innerText = FormatTime(minutes, seconds);
+
+
+	// variables for the button
+	let button = document.getElementById("start-button");
+	button.addEventListener("click", Start)
+
+	// function for the countdown of the timer
+	function countDown() {
+
+		// decrement the time
+			if (seconds == 0) {
+				if (minutes == 0) {
+
+					console.log("Timer is done");
+					clearInterval(timer)
+					return;
+				}
+				// decrement the minutes and seconds
+				minutes--;
+				seconds = 59;
+			}
+
+			// decrement the seconds
+			else { 
+				seconds--;
+			}
+
+			// display the time
+			document.getElementById("timer").innerText = FormatTime(minutes, seconds);
+	}
+
+	// function to format the time
+	function FormatTime(minutes, seconds) {
+
+		return `${minutes}:${seconds < 10 ? '0' : ''}${seconds}`;
+	}
+
+	// function to start the timer
+	function Start() {
+
+		if (timer !== null) {
+			return;
+		}
+
+		// remove the event listener for the start button
+		button.removeEventListener("click", Start)
+		button.addEventListener("click", Stop)
+
+		// change the text of the button
+		button.innerText = "Stop"
+
+		// start the timer
+		timer = setInterval(countDown, 1000);
+		document.getElementById("timer").innerText = FormatTime(minutes, seconds);
+	}
+
+	// function to stop the timer
+	function Stop() {
+
+		// remove the event listener for the stop button
+		button.removeEventListener("click", Stop)
+		button.addEventListener("click", Start)
+
+		// change the text of the button
+		button.innerText = "Start"
+
+		// stop the timer
+		clearInterval(timer)
+		timer = null;
+		
+
+	}
+
+	// function to reset the timer
+	function Reset() {
+
+		// reset the time
+		minutes = 25;
+		seconds = 0;
+		document.getElementById("timer").innerText = FormatTime(minutes, seconds);
+
+		// remove the event listener for the stop button
+		button.removeEventListener("click", Stop)
+		button.addEventListener("click", Start)
+
+		//	change the text of the button
+		button.Value = "Start"
+		button.innerText = "Start"
+
+		clearInterval(timer)
+		timer = null;
+		
+	}
+	
+</script>
+
