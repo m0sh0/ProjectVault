@@ -20,11 +20,12 @@ html {
 body {
     margin-bottom: 60px;
     background-color: #72DD8B;
+
 }
 
 .button {
     background-color: #f7f7f7;
-    color: #72DD8B;
+    color: #A6DDB1;
     border: none;
     border-radius: 10px;
     font-family: Bahnschrift;
@@ -32,35 +33,52 @@ body {
 }
 
 .general {
-
     font-family: Bahnschrift;
-    text-align: center;
     color: #F7F7F7;
-
+    text-align: center;
+    position: relative;
+    margin: 0;
+    padding: 0;
 }
 
+#rectangle {
+    position: absolute;
+    width: 700px;
+    height: 500px;
+    top: 400px;
+    left: 50%;
+    background-color: #A6DDB1;
+    transform: translateX(-50%);
+    border-radius: 10px;
+    z-index: 0;
+    margin: -160px auto 0 auto;
+}
 
 #timer {
-   
     font-size: 130px;
+    margin: 80px auto 0 auto;
+    position: relative;
+    z-index: 1;
 }
 
 #title {
     font-size: 150px;
-    display: inline-block;
-    margin: 0 auto;
-    text-align: center;
-    color: #f7f7f7;
+    color: #F7F7F7;
     font-family: Bahnschrift;
+    margin-bottom: 0px;
+    padding-bottom: 0px;
+    line-height: 1;
 }
 
 .underline {
     width: 700px;
     height: 10px;
     background-color: #f7f7f7;
-    margin: 0 auto;
+    margin: -33px auto 0 auto;
     border-radius: 10px;
-    margin-top: 0px;
+    vertical-align: middle;
 }
+
+
 
 
