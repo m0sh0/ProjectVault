@@ -1,0 +1,51 @@
+﻿@page
+@using System.Runtime.InteropServices.JavaScript
+@model IndexModel
+
+
+<!-- title and underline -->
+<div class="title-container">
+	<h1 id="title">PomoMih</h1>
+	<div class="underline"></div>
+</div>
+
+<!-- number of breaks -->
+<div class="general" id="number-of-breaks">
+	<h4  id="count-of-breaks"></h4>
+	<h3 id="time-for-break-or-work"> asd</h3>
+</div>
+
+
+<!--rectangle over the timer-->
+<div id="rectangle"></div>
+
+<!--rectangle for time adjust-->
+<div id="time-adjust">
+	<h1 class="general" id="pomodoro-time">Pomodoro time </h1>
+	<div id="time-adjust-buttons">
+		<button class="button" type="button" id="minute25" onClick="changeTime(25, 0)" >
+			25:00
+		</button>
+		<button class="button" type="button" id="minute20" onClick="changeTime(20, 0)">
+			20:00
+		</button>
+		<button class="button" type="button" id="minute15" onClick="changeTime(15, 0)">
+			15:00
+		</button>
+	</div>
+</div>
+
+<!--timer-->
+<p class="general" id="timer"></p>
+
+<!--start button-->
+<button class="button" type="button" id="start-button" onClick="Start(); buttonClickAudio()">
+	Start
+</button>
+
+<!--reset button-->
+<button class="button" type="button" id="reset-button" onClick="Reset()">
+	Reset
+</button>
+
+
