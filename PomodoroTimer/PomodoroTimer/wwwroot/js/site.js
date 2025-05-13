@@ -102,6 +102,7 @@ function countDown() {
 
 				// switching to work mode
 				document.body.classList.remove("break-mode");
+                document.body.classList.remove("long-break-mode");
 				document.body.classList.add("work-mode");
 
 				// displaying the time adjust
@@ -249,7 +250,6 @@ function changeTime(minuteParam, secondsParam) {
 
 }
 
-// function for starting the break;
 function buttonClickAudio() {
 
 	let audio = new Audio("/sounds/ButtonClick.mp3");
@@ -260,7 +260,7 @@ function breakModeAudio() {
     let audio = new Audio("/sounds/BreakModeChime.mp3");
     audio.play();
 }
-//
+
 function removeButtonShadow(buttonName) {
 
 	let button = document.getElementById(buttonName);
