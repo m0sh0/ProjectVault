@@ -158,7 +158,9 @@ function startInterval(minuteParam, secondsParam) {
 	
 	// removing event listeners
 	button.removeEventListener("click", Start);
-    removeButtonShadow("start-button");
+
+	removeButtonShadow("start-button");
+
 	button.addEventListener("click", Stop);
 
     button.innerText = "Stop";
@@ -175,7 +177,9 @@ function Stop() {
 
 	// remove the event listener for the stop button
 	button.removeEventListener("click", Stop);
-    addButtonShadow("start-button");
+
+	addButtonShadow("start-button");
+
     button.addEventListener("click", Start);
 
 	// change the text of the button
@@ -245,7 +249,7 @@ function changeTime(minuteParam, secondsParam) {
 
 }
 
-// function for starting the brrak;
+// function for starting the break;
 function buttonClickAudio() {
 
 	let audio = new Audio("/sounds/ButtonClick.mp3");
