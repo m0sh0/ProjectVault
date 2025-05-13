@@ -285,7 +285,3 @@ async function allowNotifications() {
         
     }
  }
-
-
-
- 
