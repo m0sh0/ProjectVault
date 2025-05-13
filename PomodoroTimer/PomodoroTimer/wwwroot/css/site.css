@@ -1,4 +1,4 @@
-html {
+﻿html {
   font-size: 14px;
 }
 
@@ -38,15 +38,7 @@ body {
     top: 240px;
     background-color: #A6DDB1;
     z-index: 2;
-    opacity: 1;
-    visibility: visible;
-    transition: opacity 0.5s ease, visibility 0.5s ease;
 }
-.hidden {
-    opacity: 0;
-    visibility: hidden;
-}
-
 
 #rectangle {
     position: absolute;
@@ -75,24 +67,31 @@ body {
     position: relative;
     z-index: 1;
 }
-#start-button {
-    position: absolute;
-    top: 56%; 
-    left: 50%; 
-    transform: translate(-50%, -50%);
+#start-buton,
+#reset-button {
     width: 160px;
     height: 80px;
     font-size: 50px;
 }
+#start-button {
+    width: 160px;
+    height: 80px;
+    font-size: 50px;
+}
+#start-button-container {
+    position: absolute;
+    top: 56%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
 #reset-button {
+    color: #72DD8B
+}
+#reset-button-container {
     position: absolute;
     top: 83%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 160px;
-    height: 80px;
-    font-size: 50px;
-    color: #72DD8B
 }
 
 #number-of-breaks {
@@ -119,7 +118,6 @@ body {
 .work-mode #rectangle {
     background-color: #A6DDB1;
 }
-
 .work-mode #minute25,
 .work-mode #minute20,
 .work-mode #minute15,
@@ -131,16 +129,6 @@ body {
     color: #72DD8B;
 }
 
-
-.work-mode #minute25:active,
-.work-mode #minute20:active,
-.work-mode #minute15:active,
-.work-mode #start-button:active {
-    background-color: #A6DDB1;
-    color: #F7F7F7;
-}
-
-
 .break-mode {
     background-color: #69A9DE;
 }
@@ -150,21 +138,27 @@ body {
     background-color: #8CB3D8;
 }
 
-.break-mode #minute25,
-.break-mode #minute20,
-.break-mode #minute15,
 .break-mode #start-button{
     color: #8CB3D8;
 }
 .break-mode #reset-button {
     color: #69A9DE;
 }
-.break-mode #minute25:active,
-.break-mode #minute20:active,
-.break-mode #minute15:active,
-.break-mode #start-button:active {
-    background-color: #8CB3D8;
-    color: #F7F7F7;
+
+.long-break-mode {
+    background-color: #7a5396;
+}
+.long-break-mode #time-adjust,
+.long-break-mode #rectangle {
+    background-color: #9364b5;
+}
+
+.long-break-mode #start-button {
+    color: #9364b5;
+}
+
+.long-break-mode #reset-button {
+    color: #7a5396;
 }
 
 .underline {
@@ -192,16 +186,15 @@ body {
 .button {
     background-color: #F7F7F7;
     color: #A6DDB1;
-    border: 5px solid #F7F7F7;
+    border: none;
     border-radius: 10px;
     font-family: Bahnschrift;
     font-size: 50px;
-/*    transition-duration: 0.2s;*/
+    box-shadow: 0px 7px #C2C2C2;
 }
-
-.button:active {
-    background-color: #A6DDB1;
-    color: #F7F7F7;
+.no-shadow {
+    transform: translateY(2px) !important;
+    box-shadow: none !important;
 }
 .btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
     box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
