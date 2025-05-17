@@ -1,11 +1,11 @@
 ﻿// variables for the timer
-let minutes = 0;
-let seconds = 3;
+let minutes = 25;
+let seconds = 0;
 let timer = null;
 
 // variables for the default time
-let defaultMinutes = 0;
-let defaultSeconds = 3;
+let defaultMinutes = 25;
+let defaultSeconds = 0;
 
 //let permissionGranted = notifyMe();
 
@@ -79,7 +79,7 @@ function countDown() {
 
                     document.getElementById("time-for-break-or-work").innerText = "Time for a break!";
 
-                    startInterval(0, 5);
+                    startInterval(5, 0);
                 }
 
 				else if (numberOfBreaks === 4) {
@@ -90,7 +90,7 @@ function countDown() {
 
                     document.getElementById("time-for-break-or-work").innerText = "Time for a loooong break!";
 
-					startInterval(0, 10);
+					startInterval(25, 0);
 
 					numberOfBreaks = 0;
 				}
