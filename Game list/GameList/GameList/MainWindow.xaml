@@ -12,7 +12,11 @@
             <RowDefinition Height="100"/>
             <RowDefinition/>
         </Grid.RowDefinitions>
-        <userControls:MenuBar></userControls:MenuBar>
+
+        <!-- Header -->
+        <userControls:MenuBar Grid.Row="0"></userControls:MenuBar>
+
+
     </Grid>
     
 </Window>
