@@ -1,4 +1,8 @@
-﻿using System.Text;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Data;
@@ -9,11 +13,14 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace GameList
+namespace GameList.View.UserControl
 {
-    public partial class MainWindow : Window
+    /// <summary>
+    /// Interaction logic for MenuBar.xaml
+    /// </summary>
+    public partial class MenuBar : System.Windows.Controls.UserControl
     {
-        public MainWindow()
+        public MenuBar()
         {
             InitializeComponent();
         }
