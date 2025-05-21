@@ -16,7 +16,8 @@ namespace GameList
 {
     public partial class MainWindow : Window
     {
-        private const string connectionString = "Host=localhost;" +
+
+        private const string connectionString = "Host=192.168.0.114;" +
                                                 "Port=5432;" +
                                                 "Username=postgres;" +
                                                 "Password=PostgreMishoSQL;" +
