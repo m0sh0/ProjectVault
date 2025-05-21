@@ -34,6 +34,8 @@ namespace GameList.View.UserControl
         {
             await LoadGames();
         }
+
+        // Load the connection string from .json file
         private static string LoadConnectionString()
         {
             var config = new ConfigurationBuilder()
