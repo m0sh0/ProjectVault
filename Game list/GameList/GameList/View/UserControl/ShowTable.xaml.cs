@@ -15,39 +15,47 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using Microsoft.Extensions.Configuration;
+
 
 namespace GameList.View.UserControl
 {
 
     public partial class ShowTable : System.Windows.Controls.UserControl
     {
-        private const string ConnectionString = "Host=192.168.0.114;" +
-                                                "Port=5432;" +
-                                                "Username=postgres;" +
-                                                "Password=PostgreMishoSQL;" +
-                                                "Database=games";
+        string _connectionString = LoadConnectionString();
 
         public ShowTable()
         {
             InitializeComponent();
-
 
         }
         private async void ButtonShowTable_Click(object sender, RoutedEventArgs e)
         {
             await LoadGames();
         }
+        private static string LoadConnectionString()
+        {
+            var config = new ConfigurationBuilder()
+                .SetBasePath(AppContext.BaseDirectory)
+                .AddJsonFile("appsettings.json")
+                .Build();
 
+            return config["ConnectionString"];
+        }
+        // Load games from the database and bind to DataGrid
         private async Task LoadGames()
         {
             ObservableCollection<Game> games = new();
 
-            using (NpgsqlConnection conn = new(ConnectionString))
+            // Open a connection to the database
+            using (NpgsqlConnection conn = new(_connectionString))
             {
                 await conn.OpenAsync();
                 using (NpgsqlCommand cmd = new("SELECT * FROM games", conn))
                 using (NpgsqlDataReader reader = cmd.ExecuteReader())
                 {
+                    // Read the data from the database and populate the ObservableCollection
                     while (reader.Read())
                     {
                         games.Add(new Game
@@ -62,13 +70,17 @@ namespace GameList.View.UserControl
 
                         });
                     }
+                    // Bind the ObservableCollection to the DataGrid
                     DataGrid grid = ((MainWindow)Application.Current.MainWindow).GamesDataGridPublic;
                     grid.ItemsSource = games;
                 }
 
                 
             }
+            
         }
+
+ 
 
     }
 }

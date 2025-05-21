@@ -20,7 +20,8 @@
         <!-- DataBase grid -->
         <DataGrid  x:Name="GamesDataGrid" IsReadOnly="True" Grid.Row="1" AutoGenerateColumns="True" Width="360" Height="200" Margin="400,67,50,67" >
         </DataGrid>
-        <showTable:ShowTable Margin="120,30,560,244" Grid.Row="1"></showTable:ShowTable>
+
+        <showTable:ShowTable Grid.Row="1" Margin="-400, -220,0,0"></showTable:ShowTable>
 
     </Grid>
     
