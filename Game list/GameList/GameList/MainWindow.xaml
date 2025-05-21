@@ -16,7 +16,8 @@
         <!-- Header -->
         <userControls:MenuBar Grid.Row="0"></userControls:MenuBar>
 
-
+        <DataGrid  Name="GamesDataGrid" IsReadOnly="True" Grid.Row="1" AutoGenerateColumns="True" Width="360" Height="200" Margin="400,67,50,67" >
+        </DataGrid>
     </Grid>
     
 </Window>
