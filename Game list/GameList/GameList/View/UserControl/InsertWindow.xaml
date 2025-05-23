@@ -1,0 +1,25 @@
+﻿<Window x:Class="GameList.View.UserControl.InsertWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:GameList.View.UserControl"
+        mc:Ignorable="d"
+        Title="InsertWindow" Height="450" Width="800">
+    <Grid Background="#1e1e2e">
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+
+        <TextBlock Grid.Row="0" Text="Insert game" HorizontalAlignment="Center"
+                   VerticalAlignment="Center" FontFamily="Consolas"
+                   FontSize="40" Foreground="AliceBlue">
+        </TextBlock>
+
+    </Grid>
+</Window>

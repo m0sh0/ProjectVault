@@ -38,7 +38,7 @@ namespace GameList.View.UserControl
         // Load the connection string from .json file
         private static string LoadConnectionString()
         {
-            var config = new ConfigurationBuilder()
+            IConfigurationRoot config = new ConfigurationBuilder()
                 .SetBasePath(AppContext.BaseDirectory)
                 .AddJsonFile("appsettings.json")
                 .Build();
