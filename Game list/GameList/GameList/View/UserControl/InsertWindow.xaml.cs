@@ -16,9 +16,6 @@ using Npgsql;
 
 namespace GameList.View.UserControl
 {
-    /// <summary>
-    /// Interaction logic for InsertWindow.xaml
-    /// </summary>
     public partial class InsertWindow : Window
     {
         string _connectionString = LoadConnectionString();
