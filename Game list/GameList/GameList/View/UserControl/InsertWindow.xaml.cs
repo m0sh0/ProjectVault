@@ -53,7 +53,6 @@ namespace GameList.View.UserControl
             }
 
 
-
             if (!DateTime.TryParse(releaseDateText, out DateTime releaseDate) ||
                 !bool.TryParse(completedText, out bool completed) ||
                 !int.TryParse(ratingText, out int rating))
