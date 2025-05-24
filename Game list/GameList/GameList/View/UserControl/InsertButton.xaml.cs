@@ -21,6 +21,7 @@ namespace GameList.View.UserControl
         {
             InitializeComponent();
         }
+
         private void ButtonInsert_Click(object sender, RoutedEventArgs e)
         {
             InsertWindow insertWindow = new InsertWindow();

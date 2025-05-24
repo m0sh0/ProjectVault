@@ -65,7 +65,7 @@
     </UserControl.Resources>
     <Button Style="{DynamicResource RoundedButtonStyle}" Content="Insert Game" FontSize="16" 
          FontFamily="Consolas" Background="AliceBlue" Foreground="#1e1e2e" 
-         BorderThickness="0" Click="ButtonInsert_Click"
-         Padding="10,5" MinWidth="120">
+         BorderThickness="0" Padding="10,5" 
+         MinWidth="120" Click="ButtonInsert_Click">
     </Button>
 </UserControl>

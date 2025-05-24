@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.Extensions.Configuration;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -22,6 +23,20 @@ namespace GameList.View.UserControl
         public InsertWindow()
         {
             InitializeComponent();
+        }
+
+        private void InsertGame_Click(object sender, RoutedEventArgs e)
+        {
+            
+        }
+        private static string LoadConnectionString()
+        {
+            IConfigurationRoot config = new ConfigurationBuilder()
+                .SetBasePath(AppContext.BaseDirectory)
+                .AddJsonFile("appsettings.json")
+                .Build();
+
+            return config["ConnectionString"];
         }
     }
 }

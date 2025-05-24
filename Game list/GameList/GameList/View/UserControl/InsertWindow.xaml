@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:GameList.View.UserControl"
         xmlns:user="clr-namespace:GameList.View.UserControl"
         mc:Ignorable="d"
-        Title="InsertWindow" Height="450" Width="300">
+        Title="InsertWindow" Height="600" Width="300">
     <Grid Background="#1e1e2e">
         <Grid.RowDefinitions>
             <RowDefinition/>
@@ -22,7 +22,7 @@
 
         <TextBlock Grid.Row="0" Text="Insert game" HorizontalAlignment="Center"
                    VerticalAlignment="Center" FontFamily="Consolas"
-                   FontSize="40" Foreground="AliceBlue">
+                   FontSize="35" Foreground="AliceBlue">
         </TextBlock>
 
         <user:InputField Grid.Row="1" Placeholder="Title"></user:InputField>
@@ -32,6 +32,12 @@
         <user:InputField Grid.Row="5" Placeholder="Release date"></user:InputField>
         <user:InputField Grid.Row="6" Placeholder="Completed"></user:InputField>
         <user:InputField Grid.Row="7" Placeholder="Rating"></user:InputField>
+
+        <Button Style="{DynamicResource RoundedButtonStyle}" Content="Insert" FontSize="30" 
+                FontFamily="Consolas" Background="AliceBlue" Foreground="#1e1e2e" 
+                BorderThickness="0" MinWidth="120" Grid.Row="8"
+                Click="InsertGame_Click">
+        </Button>
 
     </Grid>
 </Window>

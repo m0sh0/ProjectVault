@@ -5,8 +5,9 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:GameList"
         xmlns:userControls="clr-namespace:GameList.View.UserControl"
+        xmlns:insert="clr-namespace:GameList.View.UserControl"
         xmlns:showTable="clr-namespace:GameList.View.UserControl"
-        xmlns:Insert="clr-namespace:GameList.View.UserControl"
+       
         xmlns:user="clr-namespace:GameList.View.UserControl"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
@@ -24,7 +25,7 @@
         </DataGrid>
 
         <showTable:ShowTable Grid.Row="1" Margin="-400, -220,0,0"></showTable:ShowTable>
-        <Insert:InsertButton Grid.Row="1" Margin="-400, -50,0,0"></Insert:InsertButton>
+        <insert:InsertButton Grid.Row="1" Margin="-400, -80,0,0"></insert:InsertButton>
     </Grid>
     
 </Window>
