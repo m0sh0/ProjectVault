@@ -17,7 +17,6 @@
             <RowDefinition/>
             <RowDefinition/>
             <RowDefinition/>
-            <RowDefinition/>
         </Grid.RowDefinitions>
 
         <TextBlock Grid.Row="0" Text="Insert game" HorizontalAlignment="Center"
@@ -25,13 +24,12 @@
                    FontSize="35" Foreground="AliceBlue">
         </TextBlock>
 
-        <user:InputField Grid.Row="1" Placeholder="Title"></user:InputField>
-        <user:InputField Grid.Row="2" Placeholder="Genre"></user:InputField>
-        <user:InputField Grid.Row="3" Placeholder="Platform"></user:InputField>
-        <user:InputField Grid.Row="4" Placeholder="Release date"></user:InputField>
-        <user:InputField Grid.Row="5" Placeholder="Release date"></user:InputField>
-        <user:InputField Grid.Row="6" Placeholder="Completed"></user:InputField>
-        <user:InputField Grid.Row="7" Placeholder="Rating"></user:InputField>
+        <user:InputField Grid.Row="1" Placeholder="Title" x:Name="TitleInput"></user:InputField>
+        <user:InputField Grid.Row="2" Placeholder="Genre" x:Name="GenreInput"></user:InputField>
+        <user:InputField Grid.Row="3" Placeholder="Platform" x:Name="PlatformInput"></user:InputField>
+        <user:InputField Grid.Row="4" Placeholder="Release date" x:Name="ReleaseInput"></user:InputField>
+        <user:InputField Grid.Row="5" Placeholder="Completed" x:Name="CompletedInput"></user:InputField>
+        <user:InputField Grid.Row="6" Placeholder="Rating" x:Name="RatingInput"></user:InputField>
 
         <Button Style="{DynamicResource RoundedButtonStyle}" Content="Insert" FontSize="30" 
                 FontFamily="Consolas" Background="AliceBlue" Foreground="#1e1e2e" 

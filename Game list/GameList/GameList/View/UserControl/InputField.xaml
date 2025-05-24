@@ -10,13 +10,13 @@
     <Grid Background="AliceBlue">
 
         <TextBox x:Name="TxtInput" VerticalAlignment="Center"
-                 FontSize="16" FontFamily="Consolas"
+                 FontSize="13" FontFamily="Consolas"
                  Background="Transparent"
                  BorderThickness="0" Margin="0,0,30,0"
                  TextChanged="TxtInput_TextChanged">
         </TextBox>
 
-        <TextBlock x:Name="PlaceHolder" FontSize="16" FontFamily="Consolas"
+        <TextBlock x:Name="PlaceHolder" FontSize="13" FontFamily="Consolas"
                    Foreground="LightGray" Text="{Binding Placeholder}"
                    VerticalAlignment="Center" Margin="2,0,0,0"
                    Panel.ZIndex="-1">

@@ -12,6 +12,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using Npgsql;
 
 namespace GameList.View.UserControl
 {
@@ -20,13 +21,63 @@ namespace GameList.View.UserControl
     /// </summary>
     public partial class InsertWindow : Window
     {
+        string _connectionString = LoadConnectionString();
         public InsertWindow()
         {
             InitializeComponent();
         }
 
-        private void InsertGame_Click(object sender, RoutedEventArgs e)
+        private async void InsertGame_Click(object sender, RoutedEventArgs e)
         {
+           await InsertGame();
+        }
+
+        private async Task InsertGame()
+        {
+            string title = TitleInput.InputText;
+            string genre = GenreInput.InputText;
+            string platform = PlatformInput.InputText;
+            string releaseDateText = DateInput.InputText;
+            string completedText = CompletedInput.InputText;
+            string ratingText = RatingInput.InputText;
+
+            if (!DateTime.TryParse(releaseDateText, out DateTime releaseDate) ||
+                !bool.TryParse(completedText, out bool completed) ||
+                !int.TryParse(ratingText, out int rating))
+            {
+                MessageBox.Show("Invalid input format.");
+                return;
+            }
+
+            using (NpgsqlConnection conn = new(_connectionString))
+            {
+                await conn.OpenAsync();
+
+                string sql = "INSERT INTO games(title, genre, platform, releasedate, comпleted, rating)" +
+                             "VALUES (@title, @genre, @platform, @releasedate, @completed, @rating)";
+
+                using NpgsqlCommand cmd = new(sql, conn) ;
+
+                cmd.Parameters.AddWithValue("title", title);
+                cmd.Parameters.AddWithValue("genre", genre);
+                cmd.Parameters.AddWithValue("platform", platform);
+                cmd.Parameters.AddWithValue("releasedate", releaseDate);
+                cmd.Parameters.AddWithValue("completed", completed);
+                cmd.Parameters.AddWithValue("rating", rating);
+
+                try
+                {
+                    await cmd.ExecuteNonQueryAsync();
+
+                    MessageBox.Show("Game inserted successfully.");
+                    this.Close();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show($"Error inserting game: {ex.Message}");
+                }
+
+            }
             
         }
         private static string LoadConnectionString()

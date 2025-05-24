@@ -34,6 +34,12 @@ namespace GameList.View.UserControl
             }
         }
 
+        public string InputText
+        {
+            get { return TxtInput.Text; }
+            set { TxtInput.Text = value; }
+        }
+
         private void ButtonClear_Click(object sender, RoutedEventArgs e)
         {
             TxtInput.Clear();
