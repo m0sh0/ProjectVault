@@ -27,8 +27,8 @@
         <user:InputField Grid.Row="1" Placeholder="Title" x:Name="TitleInput"></user:InputField>
         <user:InputField Grid.Row="2" Placeholder="Genre" x:Name="GenreInput"></user:InputField>
         <user:InputField Grid.Row="3" Placeholder="Platform" x:Name="PlatformInput"></user:InputField>
-        <user:InputField Grid.Row="4" Placeholder="Release date" x:Name="ReleaseInput"></user:InputField>
-        <user:InputField Grid.Row="5" Placeholder="Completed" x:Name="CompletedInput"></user:InputField>
+        <user:InputField Grid.Row="4" Placeholder="Release date" x:Name="DateInput"></user:InputField>
+        <user:InputField Grid.Row="5" Placeholder="Completed (true/false)" x:Name="CompletedInput"></user:InputField>
         <user:InputField Grid.Row="6" Placeholder="Rating" x:Name="RatingInput"></user:InputField>
 
         <Button Style="{DynamicResource RoundedButtonStyle}" Content="Insert" FontSize="30" 
