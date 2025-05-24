@@ -15,6 +15,9 @@
             <RowDefinition/>
             <RowDefinition/>
             <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
         </Grid.RowDefinitions>
 
         <TextBlock Grid.Row="0" Text="Insert game" HorizontalAlignment="Center"
@@ -22,12 +25,13 @@
                    FontSize="40" Foreground="AliceBlue">
         </TextBlock>
 
-        <user:InputField Grid.Row="1"></user:InputField>
-        <user:InputField Grid.Row="2"></user:InputField>
-        <user:InputField Grid.Row="3"></user:InputField>
-        <user:InputField Grid.Row="4"></user:InputField>
-       
-        
+        <user:InputField Grid.Row="1" Placeholder="Title"></user:InputField>
+        <user:InputField Grid.Row="2" Placeholder="Genre"></user:InputField>
+        <user:InputField Grid.Row="3" Placeholder="Platform"></user:InputField>
+        <user:InputField Grid.Row="4" Placeholder="Release date"></user:InputField>
+        <user:InputField Grid.Row="5" Placeholder="Release date"></user:InputField>
+        <user:InputField Grid.Row="6" Placeholder="Completed"></user:InputField>
+        <user:InputField Grid.Row="7" Placeholder="Rating"></user:InputField>
 
     </Grid>
 </Window>
