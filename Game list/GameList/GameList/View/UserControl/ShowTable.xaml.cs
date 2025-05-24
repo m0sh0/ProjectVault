@@ -24,6 +24,8 @@ namespace GameList.View.UserControl
     public partial class ShowTable : System.Windows.Controls.UserControl
     {
         string _connectionString = LoadConnectionString();
+        InsertWindow insertWindow = new();
+
 
         public ShowTable()
         {
@@ -32,7 +34,9 @@ namespace GameList.View.UserControl
         }
         private async void ButtonShowTable_Click(object sender, RoutedEventArgs e)
         {
+            insertWindow.Show();
             await LoadGames();
+            
         }
 
         // Load the connection string from .json file

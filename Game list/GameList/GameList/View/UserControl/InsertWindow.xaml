@@ -4,6 +4,7 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:GameList.View.UserControl"
+        xmlns:user="clr-namespace:GameList.View.UserControl"
         mc:Ignorable="d"
         Title="InsertWindow" Height="450" Width="300">
     <Grid Background="#1e1e2e">
@@ -20,6 +21,13 @@
                    VerticalAlignment="Center" FontFamily="Consolas"
                    FontSize="40" Foreground="AliceBlue">
         </TextBlock>
+
+        <user:InputField Grid.Row="1"></user:InputField>
+        <user:InputField Grid.Row="2"></user:InputField>
+        <user:InputField Grid.Row="3"></user:InputField>
+        <user:InputField Grid.Row="4"></user:InputField>
+       
+        
 
     </Grid>
 </Window>

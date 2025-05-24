@@ -6,6 +6,7 @@
         xmlns:local="clr-namespace:GameList"
         xmlns:userControls="clr-namespace:GameList.View.UserControl"
         xmlns:showTable="clr-namespace:GameList.View.UserControl"
+        xmlns:user="clr-namespace:GameList.View.UserControl"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
@@ -22,7 +23,6 @@
         </DataGrid>
 
         <showTable:ShowTable Grid.Row="1" Margin="-400, -220,0,0"></showTable:ShowTable>
-
     </Grid>
     
 </Window>
