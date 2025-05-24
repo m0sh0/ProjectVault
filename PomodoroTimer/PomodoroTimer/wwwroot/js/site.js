@@ -7,8 +7,6 @@ let timer = null;
 let defaultMinutes = 25;
 let defaultSeconds = 0;
 
-//let permissionGranted = notifyMe();
-
 // variables for the break
 let breakCount = 0;
 let numberOfBreaks = 0;
