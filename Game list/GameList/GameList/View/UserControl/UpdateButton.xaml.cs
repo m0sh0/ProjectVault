@@ -12,12 +12,14 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using GameList.Classes;
 
 namespace GameList.View.UserControl
 {
 
     public partial class UpdateButton : System.Windows.Controls.UserControl
     {
+        public MainWindow ParentWindow { get; set; }
         public UpdateButton()
         {
             InitializeComponent();
@@ -25,8 +27,21 @@ namespace GameList.View.UserControl
 
         private void ButtonUpdate_Click(object sender, RoutedEventArgs e)
         {
-            UpdateWindow updateWindow = new();
-            updateWindow.Show();
+            try
+            {
+                if (ParentWindow.GamesDataGrid.SelectedItem is Game selectedGame)
+                {
+                    UpdateWindow updateWindow = new();
+                    updateWindow.Show();
+                    return;
+                }
+            }
+            catch (System.NullReferenceException)
+            {
+                MessageBox.Show("Please select a game to update.");
+            }
+            
+
         }
     }
 }

@@ -18,6 +18,7 @@ namespace GameList.View.UserControl
 
     public partial class UpdateWindow : Window
     {
+        private string _connectionstring = LoadConnectionString();
         public UpdateWindow()
         {
             InitializeComponent();

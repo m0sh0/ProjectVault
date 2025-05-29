@@ -21,7 +21,7 @@ namespace GameList
         public MainWindow()
         {
             InitializeComponent();
-
         }
+
     }
 }
