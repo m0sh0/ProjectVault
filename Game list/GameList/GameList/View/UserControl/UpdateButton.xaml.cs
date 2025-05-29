@@ -15,17 +15,18 @@ using System.Windows.Shapes;
 
 namespace GameList.View.UserControl
 {
-    public partial class InsertButton : System.Windows.Controls.UserControl
+
+    public partial class UpdateButton : System.Windows.Controls.UserControl
     {
-        public InsertButton()
+        public UpdateButton()
         {
             InitializeComponent();
         }
 
-        private void ButtonInsert_Click(object sender, RoutedEventArgs e)
+        private void ButtonUpdate_Click(object sender, RoutedEventArgs e)
         {
-            InsertWindow insertWindow = new InsertWindow();
-            insertWindow.Show();
+            UpdateWindow updateWindow = new();
+            updateWindow.Show();
         }
     }
 }
