@@ -51,6 +51,7 @@ namespace GameList.View.UserControl
         {
             ObservableCollection<Game> games = new();
 
+
             // Open a connection to the database
             using (NpgsqlConnection conn = new(_connectionString))
             {
