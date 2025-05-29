@@ -22,6 +22,7 @@ namespace GameList.View.UserControl
         public UpdateWindow()
         {
             InitializeComponent();
+            Id.hideClearBtn = true;
         }
     }
 }

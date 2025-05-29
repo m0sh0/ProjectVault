@@ -24,8 +24,12 @@ namespace GameList.View.UserControl
 
         private void ButtonInsert_Click(object sender, RoutedEventArgs e)
         {
-            InsertWindow insertWindow = new InsertWindow();
-            insertWindow.Show();
+            //InsertWindow insertWindow = new InsertWindow();
+            //insertWindow.Show();
+
+            UpdateWindow updateWindow = new();
+            updateWindow.Show();
+
         }
     }
 }

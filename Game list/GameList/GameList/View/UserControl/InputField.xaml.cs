@@ -40,6 +40,17 @@ namespace GameList.View.UserControl
             set { TxtInput.Text = value; }
         }
 
+        public bool isReadOnly
+        {
+            get { return TxtInput.IsReadOnly; }
+            set { TxtInput.IsReadOnly = value; }
+        }
+
+        public bool hideClearBtn
+        {
+            set { ClearBtn.Visibility = value ? Visibility.Hidden : Visibility.Visible; }
+        }
+
         private void ButtonClear_Click(object sender, RoutedEventArgs e)
         {
             TxtInput.Clear();
