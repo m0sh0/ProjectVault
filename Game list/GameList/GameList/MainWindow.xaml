@@ -27,7 +27,7 @@
 
         <showTable:ShowTable Grid.Row="1" Margin="-400, -220,0,0"></showTable:ShowTable>
         <insert:InsertButton Grid.Row="1" Margin="-400, -80,0,0"></insert:InsertButton>
-        <update:UpdateButton  x:Name="UpdateButton"  Grid.Row="1" Margin="-400, 60,0,0"></update:UpdateButton>
+        <update:UpdateButton  x:Name="UpdateButtonCtrl"  Grid.Row="1" Margin="-400, 60,0,0"></update:UpdateButton>
     </Grid>
     
 </Window>

@@ -36,7 +36,7 @@ namespace GameList.View.UserControl
                     return;
                 }
             }
-            catch (System.NullReferenceException)
+            catch (NullReferenceException)
             {
                 MessageBox.Show("Please select a game to update.");
             }
