@@ -28,7 +28,7 @@ namespace GameList.View.UserControl
         private void ButtonUpdate_Click(object sender, RoutedEventArgs e)
         {
             // Cck if the parent window is set
-            var selectedGame = ParentWindow?.GamesDataGrid.SelectedItem as Game;
+            Game? selectedGame = ParentWindow?.GamesDataGrid.SelectedItem as Game;
 
             // Check if a game is selected
             if (selectedGame == null)
@@ -38,7 +38,7 @@ namespace GameList.View.UserControl
             }
 
             // Show the update window
-            UpdateWindow updateWindow = new();
+            UpdateWindow updateWindow = new(selectedGame);
             updateWindow.Show();
 
         }
