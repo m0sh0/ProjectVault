@@ -42,6 +42,7 @@ namespace GameList.View.UserControl
 
         private async Task UpdateGame()
         {
+            // Get the values from the input fields
             string title = TitleUpdate.InputText;
             string genre = GenreUpdate.InputText;
             string platform = PlatformUpdate.InputText;
@@ -49,6 +50,7 @@ namespace GameList.View.UserControl
             bool completed = bool.Parse(CompletedUpdate.InputText);
             int rating = int.Parse(RatingUpdate.InputText);
            
+            // Open a connection to the database
             using (NpgsqlConnection conn = new(_connectionstring))
             {
                 await conn.OpenAsync();
@@ -63,7 +65,7 @@ namespace GameList.View.UserControl
 
                 using NpgsqlCommand cmd = new(sql, conn) ;
                 
-
+                // Add the values to the parameters
                 cmd.Parameters.AddWithValue("@title", title);
                 cmd.Parameters.AddWithValue("@genre", genre);
                 cmd.Parameters.AddWithValue("@platform", platform);
@@ -74,24 +76,28 @@ namespace GameList.View.UserControl
 
                 try
                 {
+                    // Execute the query
                     await cmd.ExecuteNonQueryAsync();
 
                     MessageBox.Show("Game updated successfully!");
 
                     this.Close();
 
+                    // Refresh the DataGrid with updated data
                     DataGrid grid = ((MainWindow)Application.Current.MainWindow).GamesDataGridPublic;
                     ObservableCollection<Game> games = await DataBaseHelper.LoadGamesAsync();
-                    grid.ItemsSource = games; // Refresh the DataGrid with updated data
+                    grid.ItemsSource = games; 
                 }
                 catch (Exception e)
                 {
+                    // Handle the exception
                     MessageBox.Show($"Error updating game : {e.Message}");
                 }
 
             }
         }
 
+        // Method to populate the input fields
         private void PopulateFields()
         {
             TitleUpdate.InputText = _gameToEdit.title;
