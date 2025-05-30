@@ -1,6 +1,9 @@
-﻿using Microsoft.Extensions.Configuration;
+﻿using GameList.Classes;
+using Microsoft.Extensions.Configuration;
+using Npgsql;
 using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -12,7 +15,6 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
-using Npgsql;
 
 namespace GameList.View.UserControl
 {
@@ -80,6 +82,9 @@ namespace GameList.View.UserControl
 
                     MessageBox.Show("Game inserted successfully.");
                     this.Close();
+                    DataGrid grid = ((MainWindow)Application.Current.MainWindow).GamesDataGridPublic;
+                    ObservableCollection<Game> games = await DataBaseHelper.LoadGamesAsync();
+                    grid.ItemsSource = games; // Refresh the DataGrid with updated data
                 }
                 catch (Exception ex)
                 {
