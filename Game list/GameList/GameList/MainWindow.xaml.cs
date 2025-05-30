@@ -22,6 +22,7 @@ namespace GameList
         public MainWindow()
         {
             InitializeComponent();
+            UpdateButtonCtrl.ParentWindow = this;
         }
 
     }

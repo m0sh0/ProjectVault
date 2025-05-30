@@ -27,20 +27,19 @@ namespace GameList.View.UserControl
 
         private void ButtonUpdate_Click(object sender, RoutedEventArgs e)
         {
-            try
+            // Cck if the parent window is set
+            var selectedGame = ParentWindow?.GamesDataGrid.SelectedItem as Game;
+
+            // Check if a game is selected
+            if (selectedGame == null)
             {
-                if (ParentWindow.GamesDataGrid.SelectedItem is Game selectedGame)
-                {
-                    UpdateWindow updateWindow = new();
-                    updateWindow.Show();
-                    return;
-                }
+                MessageBox.Show("Select a game from the table to update.");
+                return;
             }
-            catch (NullReferenceException)
-            {
-                MessageBox.Show("Please select a game to update.");
-            }
-            
+
+            // Show the update window
+            UpdateWindow updateWindow = new();
+            updateWindow.Show();
 
         }
     }
