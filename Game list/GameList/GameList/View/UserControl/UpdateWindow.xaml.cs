@@ -77,49 +77,18 @@ namespace GameList.View.UserControl
                     await cmd.ExecuteNonQueryAsync();
 
                     MessageBox.Show("Game updated successfully!");
+
                     this.Close();
 
-                    RefreshTable();
+                    DataGrid grid = ((MainWindow)Application.Current.MainWindow).GamesDataGridPublic;
+                    ObservableCollection<Game> games = await DataBaseHelper.LoadGamesAsync();
+                    grid.ItemsSource = games; // Refresh the DataGrid with updated data
                 }
                 catch (Exception e)
                 {
                     MessageBox.Show($"Error updating game : {e.Message}");
                 }
 
-            }
-        }
-
-        private async Task RefreshTable()
-        {
-            ObservableCollection<Game> games = new();
-
-            // Open a connection to the database
-            using (NpgsqlConnection conn = new(_connectionstring))
-            {
-                await conn.OpenAsync();
-                using (NpgsqlCommand cmd = new("SELECT * FROM games ORDER BY id", conn))
-                using (NpgsqlDataReader reader = cmd.ExecuteReader())
-                {
-                    // Read the data from the database and populate the ObservableCollection
-                    while (reader.Read())
-                    {
-                        games.Add(new Game
-                        {
-                            id = reader.GetInt32(0),
-                            title = reader.GetString(1),
-                            genre = reader.GetString(2),
-                            platform = reader.GetString(3),
-                            releasedate = reader.GetDateTime(4),
-                            completed = reader.GetBoolean(5),
-                            rating = reader.GetInt32(6)
-
-                        });
-                    }
-
-                    // Bind the ObservableCollection to the DataGrid
-                    DataGrid grid = ((MainWindow)Application.Current.MainWindow).GamesDataGridPublic;
-                    grid.ItemsSource = games;
-                }
             }
         }
 

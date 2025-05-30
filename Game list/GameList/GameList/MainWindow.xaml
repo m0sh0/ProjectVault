@@ -1,4 +1,4 @@
-﻿<Window x:Class="GameList.MainWindow"
+﻿<Window x:Class="GameList.MainWindow" Loaded="WindowLoaded"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
@@ -7,7 +7,6 @@
         xmlns:userControls="clr-namespace:GameList.View.UserControl"
         xmlns:update="clr-namespace:GameList.View.UserControl"
         xmlns:insert="clr-namespace:GameList.View.UserControl"
-        xmlns:showTable="clr-namespace:GameList.View.UserControl"
        
         xmlns:user="clr-namespace:GameList.View.UserControl"
         mc:Ignorable="d"
@@ -25,9 +24,8 @@
         <DataGrid  x:Name="GamesDataGrid" IsReadOnly="True" Grid.Row="1" AutoGenerateColumns="True" Width="360" Height="200" Margin="400,67,50,67" >
         </DataGrid>
 
-        <showTable:ShowTable Grid.Row="1" Margin="-400, -220,0,0"></showTable:ShowTable>
-        <insert:InsertButton Grid.Row="1" Margin="-400, -80,0,0"></insert:InsertButton>
-        <update:UpdateButton  x:Name="UpdateButtonCtrl"  Grid.Row="1" Margin="-400, 60,0,0"></update:UpdateButton>
+        <insert:InsertButton Grid.Row="1" Margin="-400, -200,0,0"></insert:InsertButton>
+        <update:UpdateButton  x:Name="UpdateButtonCtrl"  Grid.Row="1" Margin="-400, -60,0,0"></update:UpdateButton>
     </Grid>
     
 </Window>

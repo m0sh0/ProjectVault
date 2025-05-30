@@ -20,7 +20,7 @@ public static class DataBaseHelper
         ObservableCollection<Game> games = new();
 
         // Open a connection to the database
-        using (NpgsqlConnection conn = new())
+        using (NpgsqlConnection conn = new(_connectionstring))
         {
             await conn.OpenAsync();
 
