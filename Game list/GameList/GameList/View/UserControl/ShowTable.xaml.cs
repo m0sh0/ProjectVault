@@ -55,7 +55,7 @@ namespace GameList.View.UserControl
             using (NpgsqlConnection conn = new(_connectionString))
             {
                 await conn.OpenAsync();
-                using (NpgsqlCommand cmd = new("SELECT * FROM games", conn))
+                using (NpgsqlCommand cmd = new("SELECT * FROM games ORDER BY id", conn))
                 using (NpgsqlDataReader reader = cmd.ExecuteReader())
                 {
                     // Read the data from the database and populate the ObservableCollection

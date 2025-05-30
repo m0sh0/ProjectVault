@@ -1,6 +1,9 @@
-﻿using Microsoft.Extensions.Configuration;
+﻿using GameList.Classes;
+using Microsoft.Extensions.Configuration;
+using Npgsql;
 using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -12,8 +15,6 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
-using GameList.Classes;
-using Npgsql;
 
 namespace GameList.View.UserControl
 {
@@ -69,18 +70,56 @@ namespace GameList.View.UserControl
                 cmd.Parameters.AddWithValue("@releasedate", releaseDate);
                 cmd.Parameters.AddWithValue("@completed", completed);
                 cmd.Parameters.AddWithValue("@rating", rating);
+                cmd.Parameters.AddWithValue("@id", _gameToEdit.id);
 
                 try
                 {
                     await cmd.ExecuteNonQueryAsync();
 
                     MessageBox.Show("Game updated successfully!");
+                    this.Close();
+
+                    RefreshTable();
                 }
                 catch (Exception e)
                 {
                     MessageBox.Show($"Error updating game : {e.Message}");
                 }
 
+            }
+        }
+
+        private async Task RefreshTable()
+        {
+            ObservableCollection<Game> games = new();
+
+            // Open a connection to the database
+            using (NpgsqlConnection conn = new(_connectionstring))
+            {
+                await conn.OpenAsync();
+                using (NpgsqlCommand cmd = new("SELECT * FROM games ORDER BY id", conn))
+                using (NpgsqlDataReader reader = cmd.ExecuteReader())
+                {
+                    // Read the data from the database and populate the ObservableCollection
+                    while (reader.Read())
+                    {
+                        games.Add(new Game
+                        {
+                            id = reader.GetInt32(0),
+                            title = reader.GetString(1),
+                            genre = reader.GetString(2),
+                            platform = reader.GetString(3),
+                            releasedate = reader.GetDateTime(4),
+                            completed = reader.GetBoolean(5),
+                            rating = reader.GetInt32(6)
+
+                        });
+                    }
+
+                    // Bind the ObservableCollection to the DataGrid
+                    DataGrid grid = ((MainWindow)Application.Current.MainWindow).GamesDataGridPublic;
+                    grid.ItemsSource = games;
+                }
             }
         }
 
