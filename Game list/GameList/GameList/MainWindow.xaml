@@ -7,10 +7,10 @@
         xmlns:userControls="clr-namespace:GameList.View.UserControl"
         xmlns:update="clr-namespace:GameList.View.UserControl"
         xmlns:insert="clr-namespace:GameList.View.UserControl"
-       
+        xmlns:delete="clr-namespace:GameList.View.UserControl"
         xmlns:user="clr-namespace:GameList.View.UserControl"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="450" Width="1000">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="100"/>
@@ -21,11 +21,12 @@
         <userControls:MenuBar Grid.Row="0"></userControls:MenuBar>
         
         <!-- DataBase grid -->
-        <DataGrid  x:Name="GamesDataGrid" IsReadOnly="True" Grid.Row="1" AutoGenerateColumns="True" Width="360" Height="200" Margin="400,67,50,67" >
+        <DataGrid  x:Name="GamesDataGrid" IsReadOnly="True" Grid.Row="1" AutoGenerateColumns="True" Width="470" Margin="500,67,50,67" >
         </DataGrid>
 
-        <insert:InsertButton Grid.Row="1" Margin="-400, -200,0,0"></insert:InsertButton>
-        <update:UpdateButton x:Name="UpdateButtonCtrl"  Grid.Row="1" Margin="-400, -60,0,0"></update:UpdateButton>
+        <insert:InsertButton x:Name="InsertButtonCtrl" Grid.Row="1" Margin="-500, -200,0,0"></insert:InsertButton>
+        <update:UpdateButton x:Name="UpdateButtonCtrl"  Grid.Row="1" Margin="-500, -60,0,0"></update:UpdateButton>
+        <delete:DeleteButton x:Name="DeleteButtonCtrl" Grid.Row="1"  Margin="-500, 80,0,0"></delete:DeleteButton>
     </Grid>
     
 </Window>

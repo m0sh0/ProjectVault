@@ -23,6 +23,7 @@ namespace GameList
         {
             InitializeComponent();
             UpdateButtonCtrl.ParentWindow = this;
+            DeleteButtonCtrl.ParentWindow = this;
         }
 
         private async void WindowLoaded(object sender, RoutedEventArgs e)

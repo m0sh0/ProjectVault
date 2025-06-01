@@ -27,7 +27,7 @@ namespace GameList.View.UserControl
 
         private void ButtonUpdate_Click(object sender, RoutedEventArgs e)
         {
-            // Cck if the parent window is set
+            // Check if the parent window is set
             Game? selectedGame = ParentWindow?.GamesDataGrid.SelectedItem as Game;
 
             // Check if a game is selected

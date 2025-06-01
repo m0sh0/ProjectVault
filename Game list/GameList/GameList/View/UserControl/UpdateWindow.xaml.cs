@@ -21,7 +21,7 @@ namespace GameList.View.UserControl
 
     public partial class UpdateWindow : Window
     {
-        private string _connectionstring = LoadConnectionString();
+        private string _connectionstring = DataBaseHelper.LoadConnectionString();
         private Game _gameToEdit;
 
         public UpdateWindow(Game game)

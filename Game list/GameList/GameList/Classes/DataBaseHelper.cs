@@ -48,7 +48,7 @@ public static class DataBaseHelper
         }
     }
 
-    private static string LoadConnectionString()
+    public static string LoadConnectionString()
     {
         IConfigurationRoot config = new ConfigurationBuilder()
             .SetBasePath(AppContext.BaseDirectory)
