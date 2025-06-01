@@ -15,9 +15,6 @@ using System.Windows.Shapes;
 
 namespace GameList.View.UserControl
 {
-    /// <summary>
-    /// Interaction logic for MenuBar.xaml
-    /// </summary>
     public partial class MenuBar : System.Windows.Controls.UserControl
     {
         public MenuBar()
