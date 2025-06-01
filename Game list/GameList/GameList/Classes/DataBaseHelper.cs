@@ -49,15 +49,12 @@ public static class DataBaseHelper
     }
 
     private static string LoadConnectionString()
-        {
-            IConfigurationRoot config = new ConfigurationBuilder()
-                .SetBasePath(AppContext.BaseDirectory)
-                .AddJsonFile("appsettings.json")
-                .Build();
+    {
+        IConfigurationRoot config = new ConfigurationBuilder()
+            .SetBasePath(AppContext.BaseDirectory)
+            .AddJsonFile("appsettings.json")
+            .Build();
 
-            return config["ConnectionString"];
-        }
+        return config["ConnectionString"];
+    }
 }
-
-
-    

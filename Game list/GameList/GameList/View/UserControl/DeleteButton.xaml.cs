@@ -15,9 +15,12 @@ using System.Windows.Shapes;
 
 namespace GameList.View.UserControl
 {
-    public partial class MenuBar : System.Windows.Controls.UserControl
+    /// <summary>
+    /// Interaction logic for DeleteButton.xaml
+    /// </summary>
+    public partial class DeleteButton : UserControl
     {
-        public MenuBar()
+        public DeleteButton()
         {
             InitializeComponent();
         }
