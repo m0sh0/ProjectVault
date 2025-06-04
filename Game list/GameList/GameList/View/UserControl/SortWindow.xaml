@@ -4,13 +4,16 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:GameList.View.UserControl"
-        xmlns:sort_a_to_z="clr-namespace:GameList.View.UserControl"
+        xmlns:SortAToZ="clr-namespace:GameList.View.UserControl"
+        xmlns:SortZToA="clr-namespace:GameList.View.UserControl"
 
         mc:Ignorable="d"
         Title="SortWindow" Height="350" Width="300">
     <Grid Background="#1e1e2e ">
         <StackPanel Margin="0, 5, 0, 5">
-            <sort_a_to_z:AlphabeticSortButton x:Name="AToZ"></sort_a_to_z:AlphabeticSortButton>
+            <SortAToZ:AlphabeticSortButton x:Name="AToZ" Margin="0, 0, 0, 10"
+                                              ></SortAToZ:AlphabeticSortButton>
+            <SortZToA:BckwrdsAlphabeticSortButton></SortZToA:BckwrdsAlphabeticSortButton>
         </StackPanel>
     </Grid>
 </Window>
