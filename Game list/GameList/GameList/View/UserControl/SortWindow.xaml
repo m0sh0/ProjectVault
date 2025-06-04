@@ -8,9 +8,9 @@
 
         mc:Ignorable="d"
         Title="SortWindow" Height="350" Width="300">
-    <Grid>
-        <StackPanel>
-            <sort_a_to_z:AlphabeticSortButton></sort_a_to_z:AlphabeticSortButton>
+    <Grid Background="#1e1e2e ">
+        <StackPanel Margin="0, 5, 0, 5">
+            <sort_a_to_z:AlphabeticSortButton x:Name="AToZ"></sort_a_to_z:AlphabeticSortButton>
         </StackPanel>
     </Grid>
 </Window>

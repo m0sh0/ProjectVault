@@ -1,10 +1,10 @@
 ﻿<UserControl x:Class="GameList.View.UserControl.InputField"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
-             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:local="clr-namespace:GameList.View.UserControl"
-             mc:Ignorable="d" 
+             mc:Ignorable="d"
              Height="40" Width="200 ">
 
     <Grid Background="AliceBlue">
@@ -20,16 +20,13 @@
                    Foreground="LightGray" Text="{Binding Placeholder}"
                    VerticalAlignment="Center" Margin="2,0,0,0"
                    Panel.ZIndex="-1">
-
         </TextBlock>
 
-        <Button x:Name="ClearBtn" Width="30" Height="40" 
+        <Button x:Name="ClearBtn" Width="30" Height="40"
                 HorizontalAlignment="Right" Content="X"
                 FontFamily="Consolas" Background="#1e1e2e"
                 Foreground="AliceBlue" BorderThickness="0"
                 Click="ButtonClear_Click">
-
         </Button>
-
     </Grid>
 </UserControl>

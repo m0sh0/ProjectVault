@@ -1,24 +1,12 @@
 ﻿using GameList.Classes;
 using Microsoft.Extensions.Configuration;
 using Npgsql;
-using System;
-using System.Collections.Generic;
 using System.Collections.ObjectModel;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Shapes;
 
 namespace GameList.View.UserControl
 {
-
     public partial class UpdateWindow : Window
     {
         private string _connectionstring = DataBaseHelper.LoadConnectionString();
@@ -32,7 +20,6 @@ namespace GameList.View.UserControl
             PopulateFields();
 
             Id.hideClearBtn = true;
-            
         }
 
         private async void UpdateGame_Click(object sender, RoutedEventArgs routedEventArgs)
@@ -49,7 +36,7 @@ namespace GameList.View.UserControl
             DateTime releaseDate = DateTime.Parse(DateUpdate.InputText);
             bool completed = bool.Parse(CompletedUpdate.InputText);
             int rating = int.Parse(RatingUpdate.InputText);
-           
+
             // Open a connection to the database
             using (NpgsqlConnection conn = new(_connectionstring))
             {
@@ -63,8 +50,8 @@ namespace GameList.View.UserControl
                              "rating = @rating " +
                              "WHERE id = @id";
 
-                using NpgsqlCommand cmd = new(sql, conn) ;
-                
+                using NpgsqlCommand cmd = new(sql, conn);
+
                 // Add the values to the parameters
                 cmd.Parameters.AddWithValue("@title", title);
                 cmd.Parameters.AddWithValue("@genre", genre);
@@ -86,14 +73,13 @@ namespace GameList.View.UserControl
                     // Refresh the DataGrid with updated data
                     DataGrid grid = ((MainWindow)Application.Current.MainWindow).GamesDataGridPublic;
                     ObservableCollection<Game> games = await DataBaseHelper.LoadGamesAsync();
-                    grid.ItemsSource = games; 
+                    grid.ItemsSource = games;
                 }
                 catch (Exception e)
                 {
                     // Handle the exception
                     MessageBox.Show($"Error updating game : {e.Message}");
                 }
-
             }
         }
 

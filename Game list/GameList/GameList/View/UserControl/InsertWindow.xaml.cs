@@ -1,26 +1,16 @@
 ﻿using GameList.Classes;
 using Microsoft.Extensions.Configuration;
 using Npgsql;
-using System;
-using System.Collections.Generic;
 using System.Collections.ObjectModel;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Shapes;
 
 namespace GameList.View.UserControl
 {
     public partial class InsertWindow : Window
     {
-        string _connectionString = LoadConnectionString();
+        private string _connectionString = LoadConnectionString();
+
         public InsertWindow()
         {
             InitializeComponent();
@@ -28,7 +18,7 @@ namespace GameList.View.UserControl
 
         private async void InsertGame_Click(object sender, RoutedEventArgs e)
         {
-           await InsertGame();
+            await InsertGame();
         }
 
         private async Task InsertGame()
@@ -51,7 +41,6 @@ namespace GameList.View.UserControl
                 return;
             }
 
-
             if (!DateTime.TryParse(releaseDateText, out DateTime releaseDate) ||
                 !bool.TryParse(completedText, out bool completed) ||
                 !int.TryParse(ratingText, out int rating))
@@ -67,7 +56,7 @@ namespace GameList.View.UserControl
                 string sql = "INSERT INTO games(title, genre, platform, releasedate, completed, rating)" +
                              "VALUES (@title, @genre, @platform, @releasedate, @completed, @rating)";
 
-                using NpgsqlCommand cmd = new(sql, conn) ;
+                using NpgsqlCommand cmd = new(sql, conn);
 
                 cmd.Parameters.AddWithValue("title", title);
                 cmd.Parameters.AddWithValue("genre", genre);
@@ -90,10 +79,9 @@ namespace GameList.View.UserControl
                 {
                     MessageBox.Show($"Error inserting game: {ex.Message}");
                 }
-
             }
-            
         }
+
         private static string LoadConnectionString()
         {
             IConfigurationRoot config = new ConfigurationBuilder()

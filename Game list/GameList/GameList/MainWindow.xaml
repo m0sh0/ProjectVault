@@ -10,19 +10,20 @@
         xmlns:delete="clr-namespace:GameList.View.UserControl"
         xmlns:sort="clr-namespace:GameList.View.UserControl"
         xmlns:user="clr-namespace:GameList.View.UserControl"
+
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="1000">
     <Grid Background="#1e1e2e">
         <Grid.RowDefinitions>
-            <RowDefinition Height="100"/>
-            <RowDefinition/>
+            <RowDefinition Height="100" />
+            <RowDefinition />
         </Grid.RowDefinitions>
 
         <!-- Header -->
         <userControls:MenuBar Grid.Row="0"></userControls:MenuBar>
-        
+
         <!-- DataBase grid -->
-        <DataGrid  x:Name="GamesDataGrid" IsReadOnly="True" Grid.Row="1" AutoGenerateColumns="True" Width="470" Margin="500,67,50,67" >
+        <DataGrid  x:Name="GamesDataGrid" IsReadOnly="True" Grid.Row="1" AutoGenerateColumns="True" Width="470" Margin="500,67,50,67">
         </DataGrid>
 
         <StackPanel Grid.Row="1" Margin="50, 0, 0,0" VerticalAlignment="Center" Orientation="Vertical" HorizontalAlignment="left">
@@ -30,13 +31,10 @@
             <insert:InsertButton x:Name="InsertButtonCtrl" Grid.Row="1" Margin="0, 0,0 ,10"></insert:InsertButton>
             <update:UpdateButton x:Name="UpdateButtonCtrl"  Grid.Row="1" Margin="0, 0,0 ,10"></update:UpdateButton>
             <delete:DeleteButton x:Name="DeleteButtonCtrl" Grid.Row="1"  ></delete:DeleteButton>
-
         </StackPanel>
 
         <StackPanel Grid.Row="1" Margin="200, 0, 0,0" VerticalAlignment="Center" Orientation="Vertical" HorizontalAlignment="left">
-            <sort:AlphabeticSortButton x:Name="SortButtonCtrl" Grid.Row="1" Margin="0, 0,0 ,10"></sort:AlphabeticSortButton>
+            <sort:SortButton x:Name="SortButtonCtrl"></sort:SortButton>
         </StackPanel>
-
     </Grid>
-    
 </Window>

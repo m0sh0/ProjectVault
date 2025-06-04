@@ -45,14 +45,10 @@
 
         <user:InputField x:Name="Id" Grid.Row="7" isReadOnly="True"></user:InputField>
 
-
-        <Button Style="{DynamicResource RoundedButtonStyle}" Content="Update" FontSize="30" 
-                FontFamily="Consolas" Background="AliceBlue" Foreground="#1e1e2e" 
+        <Button Style="{DynamicResource RoundedButtonStyle}" Content="Update" FontSize="30"
+                FontFamily="Consolas" Background="AliceBlue" Foreground="#1e1e2e"
                 BorderThickness="0" MinWidth="120" Grid.Row="9"
                 Click="UpdateGame_Click">
         </Button>
-
     </Grid>
-
 </Window>
-  

@@ -9,14 +9,14 @@
         Title="InsertWindow" Height="600" Width="300">
     <Grid Background="#1e1e2e">
         <Grid.RowDefinitions>
-            <RowDefinition/>
-            <RowDefinition/>
-            <RowDefinition/>
-            <RowDefinition/>
-            <RowDefinition/>
-            <RowDefinition/>
-            <RowDefinition/>
-            <RowDefinition/>
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
         </Grid.RowDefinitions>
 
         <TextBlock Grid.Row="0" Text="Insert game" HorizontalAlignment="Center"
@@ -31,11 +31,10 @@
         <user:InputField Grid.Row="5" Placeholder="Completed (true/false)" x:Name="CompletedInput"></user:InputField>
         <user:InputField Grid.Row="6" Placeholder="Rating" x:Name="RatingInput"></user:InputField>
 
-        <Button Style="{DynamicResource RoundedButtonStyle}" Content="Insert" FontSize="30" 
-                FontFamily="Consolas" Background="AliceBlue" Foreground="#1e1e2e" 
+        <Button Style="{DynamicResource RoundedButtonStyle}" Content="Insert" FontSize="30"
+                FontFamily="Consolas" Background="AliceBlue" Foreground="#1e1e2e"
                 BorderThickness="0" MinWidth="120" Grid.Row="8"
                 Click="InsertGame_Click">
         </Button>
-
     </Grid>
 </Window>
