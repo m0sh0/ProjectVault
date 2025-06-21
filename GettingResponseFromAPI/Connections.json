@@ -1,0 +1,3 @@
+{
+  "GetTemp": "https://api.openweathermap.org/data/2.5/weather?q=cityName&appid=b88725e9e6bec04af855f73663f8b78d&units=metric"
+}
