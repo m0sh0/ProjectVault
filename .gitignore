@@ -399,3 +399,4 @@ FodyWeavers.xsd
 
 # Ignore local configuration with secrets
 appsettings.json
+Connections.json
