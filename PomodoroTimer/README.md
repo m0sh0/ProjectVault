@@ -30,7 +30,7 @@ This is my **first front-end focused project**, built from scratch to explore we
 
 ## 📁 Project Structure
 wwwroot/
-├── css/
+├── css/ \n
 │ └── site.css
 ├── js/
 │ └── site.js
