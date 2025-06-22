@@ -15,7 +15,7 @@ This is my **first front-end focused project**, built from scratch to explore we
 
 - ⏱️ Start, pause, and reset the timer  
 - 🔄 Switch between **Work Mode** and **Break Mode** automatically  
-- ⌛ Custom time selection (15, 20, 25 minutes)  
+- ⌛ Custom time selection ( 20, 25, 30 minutes)  
 - 🔊 Audio notification when switching modes  
 - 🔔 Optional browser desktop notifications  
 - 📊 Break counter
@@ -30,13 +30,19 @@ This is my **first front-end focused project**, built from scratch to explore we
 
 ## 📁 Project Structure
 wwwroot/
-├── css/ \n
+├── css/
+
 │ └── site.css
+
 ├── js/
+
 │ └── site.js
+
 ├── sounds/
+
 │ ├── ButtonClick.mp3
 │ └── BreakModeChime.mp3
+
 ├── images/
 │ ├── favicon.ico
 │ └── logo.png
