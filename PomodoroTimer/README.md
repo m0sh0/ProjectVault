@@ -30,6 +30,7 @@ This is my **first front-end focused project**, built from scratch to explore we
 
 ## 📁 Project Structure
 wwwroot/
+
 ├── css/
 
 │ └── site.css
@@ -44,9 +45,13 @@ wwwroot/
 │ └── BreakModeChime.mp3
 
 ├── images/
+
 │ ├── favicon.ico
+
 │ └── logo.png
+
 Pages/
+
 └── Index.cshtml and related Razor pages
 
 ## 💡 Inspiration
