@@ -47,6 +47,15 @@
             WindSpeedLbl = new Label();
             label3 = new Label();
             NameLbl = new Label();
+            CurrentTempStat = new Label();
+            MaxTempStat = new Label();
+            MinTempStat = new Label();
+            FeelsLikeStat = new Label();
+            CountryStat = new Label();
+            WindSpeedStat = new Label();
+            CityStat = new Label();
+            FahrenheitCheck = new CheckBox();
+            CelsiusCheck = new CheckBox();
             SuspendLayout();
             // 
             // TitleLbl
@@ -214,7 +223,7 @@
             label1.BackColor = Color.LightSlateGray;
             label1.Location = new Point(282, 285);
             label1.Name = "label1";
-            label1.Size = new Size(234, 53);
+            label1.Size = new Size(160, 53);
             label1.TabIndex = 12;
             label1.TextAlign = ContentAlignment.MiddleCenter;
             // 
@@ -256,9 +265,9 @@
             // label3
             // 
             label3.BackColor = Color.LightSlateGray;
-            label3.Location = new Point(522, 285);
+            label3.Location = new Point(448, 285);
             label3.Name = "label3";
-            label3.Size = new Size(234, 53);
+            label3.Size = new Size(178, 53);
             label3.TabIndex = 16;
             label3.TextAlign = ContentAlignment.MiddleCenter;
             // 
@@ -268,12 +277,129 @@
             NameLbl.BackColor = Color.LightSlateGray;
             NameLbl.Font = new Font("Bahnschrift Condensed", 24F, FontStyle.Regular, GraphicsUnit.Point, 0);
             NameLbl.ForeColor = Color.AliceBlue;
-            NameLbl.Location = new Point(525, 292);
+            NameLbl.Location = new Point(459, 292);
             NameLbl.Name = "NameLbl";
             NameLbl.Size = new Size(88, 39);
             NameLbl.TabIndex = 17;
             NameLbl.Text = "Name :";
             NameLbl.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // CurrentTempStat
+            // 
+            CurrentTempStat.AutoSize = true;
+            CurrentTempStat.BackColor = Color.LightSlateGray;
+            CurrentTempStat.Font = new Font("Bahnschrift Condensed", 24F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            CurrentTempStat.ForeColor = Color.AliceBlue;
+            CurrentTempStat.Location = new Point(189, 299);
+            CurrentTempStat.Name = "CurrentTempStat";
+            CurrentTempStat.Size = new Size(42, 39);
+            CurrentTempStat.TabIndex = 18;
+            CurrentTempStat.Text = "90";
+            CurrentTempStat.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // MaxTempStat
+            // 
+            MaxTempStat.AutoSize = true;
+            MaxTempStat.BackColor = Color.LightSlateGray;
+            MaxTempStat.Font = new Font("Bahnschrift Condensed", 24F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            MaxTempStat.ForeColor = Color.AliceBlue;
+            MaxTempStat.Location = new Point(153, 350);
+            MaxTempStat.Name = "MaxTempStat";
+            MaxTempStat.Size = new Size(42, 39);
+            MaxTempStat.TabIndex = 19;
+            MaxTempStat.Text = "90";
+            MaxTempStat.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // MinTempStat
+            // 
+            MinTempStat.AutoSize = true;
+            MinTempStat.BackColor = Color.LightSlateGray;
+            MinTempStat.Font = new Font("Bahnschrift Condensed", 24F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            MinTempStat.ForeColor = Color.AliceBlue;
+            MinTempStat.Location = new Point(141, 398);
+            MinTempStat.Name = "MinTempStat";
+            MinTempStat.Size = new Size(42, 39);
+            MinTempStat.TabIndex = 20;
+            MinTempStat.Text = "90";
+            MinTempStat.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // FeelsLikeStat
+            // 
+            FeelsLikeStat.AutoSize = true;
+            FeelsLikeStat.BackColor = Color.LightSlateGray;
+            FeelsLikeStat.Font = new Font("Bahnschrift Condensed", 24F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            FeelsLikeStat.ForeColor = Color.AliceBlue;
+            FeelsLikeStat.Location = new Point(175, 451);
+            FeelsLikeStat.Name = "FeelsLikeStat";
+            FeelsLikeStat.Size = new Size(42, 39);
+            FeelsLikeStat.TabIndex = 21;
+            FeelsLikeStat.Text = "90";
+            FeelsLikeStat.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // CountryStat
+            // 
+            CountryStat.AutoSize = true;
+            CountryStat.BackColor = Color.LightSlateGray;
+            CountryStat.Font = new Font("Bahnschrift Condensed", 24F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            CountryStat.ForeColor = Color.AliceBlue;
+            CountryStat.Location = new Point(392, 292);
+            CountryStat.Name = "CountryStat";
+            CountryStat.Size = new Size(44, 39);
+            CountryStat.TabIndex = 22;
+            CountryStat.Text = "BG";
+            CountryStat.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // WindSpeedStat
+            // 
+            WindSpeedStat.AutoSize = true;
+            WindSpeedStat.BackColor = Color.LightSlateGray;
+            WindSpeedStat.Font = new Font("Bahnschrift Condensed", 24F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            WindSpeedStat.ForeColor = Color.AliceBlue;
+            WindSpeedStat.Location = new Point(427, 411);
+            WindSpeedStat.Name = "WindSpeedStat";
+            WindSpeedStat.Size = new Size(83, 39);
+            WindSpeedStat.TabIndex = 23;
+            WindSpeedStat.Text = "90m\\s";
+            WindSpeedStat.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // CityStat
+            // 
+            CityStat.AutoSize = true;
+            CityStat.BackColor = Color.LightSlateGray;
+            CityStat.Font = new Font("Bahnschrift Condensed", 24F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            CityStat.ForeColor = Color.AliceBlue;
+            CityStat.Location = new Point(541, 292);
+            CityStat.Name = "CityStat";
+            CityStat.Size = new Size(85, 39);
+            CityStat.TabIndex = 24;
+            CityStat.Text = "Pirdop";
+            CityStat.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // FahrenheitCheck
+            // 
+            FahrenheitCheck.AutoSize = true;
+            FahrenheitCheck.Font = new Font("Bahnschrift Condensed", 26.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            FahrenheitCheck.ForeColor = Color.LightSlateGray;
+            FahrenheitCheck.Location = new Point(42, 9);
+            FahrenheitCheck.Name = "FahrenheitCheck";
+            FahrenheitCheck.Size = new Size(60, 46);
+            FahrenheitCheck.TabIndex = 25;
+            FahrenheitCheck.Text = "F°";
+            FahrenheitCheck.UseVisualStyleBackColor = true;
+            FahrenheitCheck.CheckedChanged += checkBox1_CheckedChanged;
+            // 
+            // CelsiusCheck
+            // 
+            CelsiusCheck.AutoSize = true;
+            CelsiusCheck.Font = new Font("Bahnschrift Condensed", 26.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            CelsiusCheck.ForeColor = Color.LightSlateGray;
+            CelsiusCheck.Location = new Point(42, 61);
+            CelsiusCheck.Name = "CelsiusCheck";
+            CelsiusCheck.Size = new Size(62, 46);
+            CelsiusCheck.TabIndex = 26;
+            CelsiusCheck.Text = "C°";
+            CelsiusCheck.UseVisualStyleBackColor = true;
+            CelsiusCheck.CheckedChanged += checkBox1_CheckedChanged_1;
             // 
             // Form1
             // 
@@ -281,6 +407,15 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.AliceBlue;
             ClientSize = new Size(905, 543);
+            Controls.Add(CelsiusCheck);
+            Controls.Add(FahrenheitCheck);
+            Controls.Add(CityStat);
+            Controls.Add(WindSpeedStat);
+            Controls.Add(CountryStat);
+            Controls.Add(FeelsLikeStat);
+            Controls.Add(MinTempStat);
+            Controls.Add(MaxTempStat);
+            Controls.Add(CurrentTempStat);
             Controls.Add(NameLbl);
             Controls.Add(label3);
             Controls.Add(WindSpeedLbl);
@@ -328,5 +463,14 @@
         private Label WindSpeedLbl;
         private Label label3;
         private Label NameLbl;
+        private Label CurrentTempStat;
+        private Label MaxTempStat;
+        private Label MinTempStat;
+        private Label FeelsLikeStat;
+        private Label CountryStat;
+        private Label WindSpeedStat;
+        private Label CityStat;
+        private CheckBox FahrenheitCheck;
+        private CheckBox CelsiusCheck;
     }
 }
