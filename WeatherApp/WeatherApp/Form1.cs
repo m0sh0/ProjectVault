@@ -1,4 +1,6 @@
 using System.Diagnostics;
+using WeatherApp.Classes.Models;
+using WeatherApp.Classes.Services;
 
 namespace WeatherApp
 {
@@ -29,9 +31,13 @@ namespace WeatherApp
             InputLbl.Text = string.Empty;
         }
 
-        private void SearchBtn_Click(object sender, EventArgs e)
+        private async void SearchBtn_Click(object sender, EventArgs e)
         {
             string input = InputLbl.Text;
+
+           Response? response = await WeatherService.GetWeatherAsync(input);
+
+            PrintInfo(response, input);
         }
 
         private void label2_Click(object sender, EventArgs e)
@@ -46,6 +52,26 @@ namespace WeatherApp
         private void checkBox1_CheckedChanged_1(object sender, EventArgs e)
         {
             FahrenheitCheck.CheckState = CheckState.Unchecked;
+        }
+
+        //TODO: Localize
+        public void PrintInfo(Response? response, string input)
+        {
+            if (response != null)
+            {
+                CurrentTempStat.Text = response.Weather?.CurrentTemp.ToString();
+                FeelsLikeStat.Text = response.Weather?.FeelsLikeTemp.ToString();
+                MaxTempStat.Text = response.Weather?.MaxTemp.ToString();
+                MinTempStat.Text = response.Weather?.MinTemp.ToString();
+
+                WindSpeedStat.Text = response.Wind?.WindSpeed.ToString();
+
+                CityStat.Text = input;
+                CountryStat.Text = response.Country?.Name;
+                return;
+            }
+
+            Console.WriteLine("Empty data");
         }
     }
 }

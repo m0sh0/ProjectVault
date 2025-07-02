@@ -290,12 +290,12 @@
             CurrentTempStat.BackColor = Color.LightSlateGray;
             CurrentTempStat.Font = new Font("Bahnschrift Condensed", 24F, FontStyle.Regular, GraphicsUnit.Point, 0);
             CurrentTempStat.ForeColor = Color.AliceBlue;
-            CurrentTempStat.Location = new Point(189, 299);
+            CurrentTempStat.Location = new Point(178, 299);
             CurrentTempStat.Name = "CurrentTempStat";
             CurrentTempStat.Size = new Size(42, 39);
             CurrentTempStat.TabIndex = 18;
             CurrentTempStat.Text = "90";
-            CurrentTempStat.TextAlign = ContentAlignment.MiddleCenter;
+            CurrentTempStat.TextAlign = ContentAlignment.MiddleLeft;
             // 
             // MaxTempStat
             // 
@@ -303,12 +303,12 @@
             MaxTempStat.BackColor = Color.LightSlateGray;
             MaxTempStat.Font = new Font("Bahnschrift Condensed", 24F, FontStyle.Regular, GraphicsUnit.Point, 0);
             MaxTempStat.ForeColor = Color.AliceBlue;
-            MaxTempStat.Location = new Point(153, 350);
+            MaxTempStat.Location = new Point(141, 350);
             MaxTempStat.Name = "MaxTempStat";
             MaxTempStat.Size = new Size(42, 39);
             MaxTempStat.TabIndex = 19;
             MaxTempStat.Text = "90";
-            MaxTempStat.TextAlign = ContentAlignment.MiddleCenter;
+            MaxTempStat.TextAlign = ContentAlignment.MiddleLeft;
             // 
             // MinTempStat
             // 
@@ -316,12 +316,12 @@
             MinTempStat.BackColor = Color.LightSlateGray;
             MinTempStat.Font = new Font("Bahnschrift Condensed", 24F, FontStyle.Regular, GraphicsUnit.Point, 0);
             MinTempStat.ForeColor = Color.AliceBlue;
-            MinTempStat.Location = new Point(141, 398);
+            MinTempStat.Location = new Point(133, 398);
             MinTempStat.Name = "MinTempStat";
             MinTempStat.Size = new Size(42, 39);
             MinTempStat.TabIndex = 20;
             MinTempStat.Text = "90";
-            MinTempStat.TextAlign = ContentAlignment.MiddleCenter;
+            MinTempStat.TextAlign = ContentAlignment.MiddleLeft;
             // 
             // FeelsLikeStat
             // 
@@ -329,12 +329,12 @@
             FeelsLikeStat.BackColor = Color.LightSlateGray;
             FeelsLikeStat.Font = new Font("Bahnschrift Condensed", 24F, FontStyle.Regular, GraphicsUnit.Point, 0);
             FeelsLikeStat.ForeColor = Color.AliceBlue;
-            FeelsLikeStat.Location = new Point(175, 451);
+            FeelsLikeStat.Location = new Point(171, 451);
             FeelsLikeStat.Name = "FeelsLikeStat";
             FeelsLikeStat.Size = new Size(42, 39);
             FeelsLikeStat.TabIndex = 21;
             FeelsLikeStat.Text = "90";
-            FeelsLikeStat.TextAlign = ContentAlignment.MiddleCenter;
+            FeelsLikeStat.TextAlign = ContentAlignment.MiddleLeft;
             // 
             // CountryStat
             // 
@@ -368,12 +368,12 @@
             CityStat.BackColor = Color.LightSlateGray;
             CityStat.Font = new Font("Bahnschrift Condensed", 24F, FontStyle.Regular, GraphicsUnit.Point, 0);
             CityStat.ForeColor = Color.AliceBlue;
-            CityStat.Location = new Point(541, 292);
+            CityStat.Location = new Point(537, 292);
             CityStat.Name = "CityStat";
             CityStat.Size = new Size(85, 39);
             CityStat.TabIndex = 24;
             CityStat.Text = "Pirdop";
-            CityStat.TextAlign = ContentAlignment.MiddleCenter;
+            CityStat.TextAlign = ContentAlignment.MiddleLeft;
             // 
             // FahrenheitCheck
             // 
