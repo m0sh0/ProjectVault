@@ -74,10 +74,5 @@ namespace WeatherApp
 
             MessageBox.Show("Empty data");
         }
-
-        public void ConvertToFahrenheit(Response? response)
-        {
-
-        }
     }
 }
