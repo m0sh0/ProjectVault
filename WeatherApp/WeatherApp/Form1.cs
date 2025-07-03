@@ -57,21 +57,27 @@ namespace WeatherApp
         //TODO: Localize
         public void PrintInfo(Response? response, string input)
         {
+
             if (response != null)
             {
-                CurrentTempStat.Text = response.Weather?.CurrentTemp.ToString();
-                FeelsLikeStat.Text = response.Weather?.FeelsLikeTemp.ToString();
-                MaxTempStat.Text = response.Weather?.MaxTemp.ToString();
-                MinTempStat.Text = response.Weather?.MinTemp.ToString();
+                CurrentTempStat.Text = $"{response.Weather?.CurrentTemp.ToString()}°C";
+                FeelsLikeStat.Text = $"{response.Weather?.FeelsLikeTemp.ToString()}°C";
+                MaxTempStat.Text = $"{response.Weather?.MaxTemp.ToString()}°C";
+                MinTempStat.Text = $"{response.Weather?.MinTemp.ToString()}°C";
 
-                WindSpeedStat.Text = response.Wind?.WindSpeed.ToString();
+                WindSpeedStat.Text = $"{response.Wind?.WindSpeed.ToString()}m/s";
 
                 CityStat.Text = input;
                 CountryStat.Text = response.Country?.Name;
                 return;
             }
 
-            Console.WriteLine("Empty data");
+            MessageBox.Show("Empty data");
+        }
+
+        public void ConvertToFahrenheit(Response? response)
+        {
+
         }
     }
 }

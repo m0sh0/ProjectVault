@@ -245,7 +245,7 @@
             label2.BackColor = Color.LightSlateGray;
             label2.Location = new Point(282, 350);
             label2.Name = "label2";
-            label2.Size = new Size(234, 163);
+            label2.Size = new Size(265, 163);
             label2.TabIndex = 14;
             label2.TextAlign = ContentAlignment.MiddleCenter;
             // 
@@ -292,9 +292,8 @@
             CurrentTempStat.ForeColor = Color.AliceBlue;
             CurrentTempStat.Location = new Point(178, 299);
             CurrentTempStat.Name = "CurrentTempStat";
-            CurrentTempStat.Size = new Size(42, 39);
+            CurrentTempStat.Size = new Size(0, 39);
             CurrentTempStat.TabIndex = 18;
-            CurrentTempStat.Text = "90";
             CurrentTempStat.TextAlign = ContentAlignment.MiddleLeft;
             // 
             // MaxTempStat
@@ -305,9 +304,8 @@
             MaxTempStat.ForeColor = Color.AliceBlue;
             MaxTempStat.Location = new Point(141, 350);
             MaxTempStat.Name = "MaxTempStat";
-            MaxTempStat.Size = new Size(42, 39);
+            MaxTempStat.Size = new Size(0, 39);
             MaxTempStat.TabIndex = 19;
-            MaxTempStat.Text = "90";
             MaxTempStat.TextAlign = ContentAlignment.MiddleLeft;
             // 
             // MinTempStat
@@ -318,9 +316,8 @@
             MinTempStat.ForeColor = Color.AliceBlue;
             MinTempStat.Location = new Point(133, 398);
             MinTempStat.Name = "MinTempStat";
-            MinTempStat.Size = new Size(42, 39);
+            MinTempStat.Size = new Size(0, 39);
             MinTempStat.TabIndex = 20;
-            MinTempStat.Text = "90";
             MinTempStat.TextAlign = ContentAlignment.MiddleLeft;
             // 
             // FeelsLikeStat
@@ -331,9 +328,8 @@
             FeelsLikeStat.ForeColor = Color.AliceBlue;
             FeelsLikeStat.Location = new Point(171, 451);
             FeelsLikeStat.Name = "FeelsLikeStat";
-            FeelsLikeStat.Size = new Size(42, 39);
+            FeelsLikeStat.Size = new Size(0, 39);
             FeelsLikeStat.TabIndex = 21;
-            FeelsLikeStat.Text = "90";
             FeelsLikeStat.TextAlign = ContentAlignment.MiddleLeft;
             // 
             // CountryStat
@@ -344,9 +340,8 @@
             CountryStat.ForeColor = Color.AliceBlue;
             CountryStat.Location = new Point(392, 292);
             CountryStat.Name = "CountryStat";
-            CountryStat.Size = new Size(44, 39);
+            CountryStat.Size = new Size(0, 39);
             CountryStat.TabIndex = 22;
-            CountryStat.Text = "BG";
             CountryStat.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // WindSpeedStat
@@ -357,9 +352,8 @@
             WindSpeedStat.ForeColor = Color.AliceBlue;
             WindSpeedStat.Location = new Point(427, 411);
             WindSpeedStat.Name = "WindSpeedStat";
-            WindSpeedStat.Size = new Size(83, 39);
+            WindSpeedStat.Size = new Size(0, 39);
             WindSpeedStat.TabIndex = 23;
-            WindSpeedStat.Text = "90m\\s";
             WindSpeedStat.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // CityStat
@@ -370,9 +364,8 @@
             CityStat.ForeColor = Color.AliceBlue;
             CityStat.Location = new Point(537, 292);
             CityStat.Name = "CityStat";
-            CityStat.Size = new Size(85, 39);
+            CityStat.Size = new Size(0, 39);
             CityStat.TabIndex = 24;
-            CityStat.Text = "Pirdop";
             CityStat.TextAlign = ContentAlignment.MiddleLeft;
             // 
             // FahrenheitCheck

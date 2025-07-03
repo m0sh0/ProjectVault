@@ -12,11 +12,17 @@ namespace WeatherApp.Classes.Services
 {
     internal class WeatherService
     {
-        public static async Task<Response?> GetWeatherAsync(string city)
+        public static bool Fahrenheit { get; set; }
+        public static async Task<Response?> GetWeatherAsync(string city, string units)
         {
             string baseUrl = ConfigLoader.LoadConnection();
 
             string url = baseUrl.Replace("cityName", city);
+
+            if (Fahrenheit)
+            {
+                url = url.Replace("metric", units);
+            }
 
             HttpClient client = new();
             HttpResponseMessage response = await client.GetAsync(url);
