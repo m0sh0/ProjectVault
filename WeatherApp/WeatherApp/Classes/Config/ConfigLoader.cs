@@ -14,8 +14,11 @@ namespace WeatherApp.Classes.Config
         //Load the connections strings from the config file
         public static string LoadConnection()
         {
+            string connectionsPath =
+                Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Resources", "Connections.json");
+
             string jsonContent =
-                File.ReadAllText("C:\\Users\\misho\\source\\repos\\m0sh0\\ProjectVault\\WeatherApp\\WeatherApp\\Resources\\Connections.json");
+                File.ReadAllText(connectionsPath);
 
             Connections? connections = System.Text.Json.JsonSerializer.Deserialize<Connections>(jsonContent);
 
