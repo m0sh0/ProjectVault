@@ -19,12 +19,14 @@ namespace WeatherApp.Classes.Services
 
             string url = baseUrl.Replace("cityName", city);
 
-            //if (Fahrenheit)
-            //{
-            //    url = url.Replace("metric", units);
-            //}
+            if (Fahrenheit)
+                url = url.Replace("FOrC", "imperial");
+            else
+                url = url.Replace("FOrC", "metric");
+            
 
-            HttpClient client = new();
+
+                HttpClient client = new();
             HttpResponseMessage response = await client.GetAsync(url);
 
             string jsonResponse = await response.Content.ReadAsStringAsync();

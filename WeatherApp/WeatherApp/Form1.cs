@@ -35,9 +35,17 @@ namespace WeatherApp
         {
             string input = InputLbl.Text;
 
-           Response? response = await WeatherService.GetWeatherAsync(input);
+            if (input == string.Empty)
+            {
+                MessageBox.Show("Please enter a city name.");
+                return;
+            }
+                
+            
 
-            PrintInfo(response, input);
+            Response? response = await WeatherService.GetWeatherAsync(input);
+
+           PrintInfo(response, input);
         }
 
         private void label2_Click(object sender, EventArgs e)
@@ -47,11 +55,14 @@ namespace WeatherApp
         private void checkBox1_CheckedChanged(object sender, EventArgs e)
         {
             CelsiusCheck.CheckState = CheckState.Unchecked;
+            WeatherService.Fahrenheit = true;
+
         }
 
         private void checkBox1_CheckedChanged_1(object sender, EventArgs e)
         {
             FahrenheitCheck.CheckState = CheckState.Unchecked;
+            WeatherService.Fahrenheit = false;
         }
 
         //TODO: Localize
@@ -60,10 +71,20 @@ namespace WeatherApp
 
             if (response != null)
             {
-                CurrentTempStat.Text = $"{response.Weather?.CurrentTemp.ToString()}°C";
-                FeelsLikeStat.Text = $"{response.Weather?.FeelsLikeTemp.ToString()}°C";
-                MaxTempStat.Text = $"{response.Weather?.MaxTemp.ToString()}°C";
-                MinTempStat.Text = $"{response.Weather?.MinTemp.ToString()}°C";
+                if (!WeatherService.Fahrenheit)
+                {
+                    CurrentTempStat.Text = $"{response.Weather?.CurrentTemp.ToString()}°C";
+                    FeelsLikeStat.Text = $"{response.Weather?.FeelsLikeTemp.ToString()}°C";
+                    MaxTempStat.Text = $"{response.Weather?.MaxTemp.ToString()}°C";
+                    MinTempStat.Text = $"{response.Weather?.MinTemp.ToString()}°C";
+                }
+                else
+                {
+                    CurrentTempStat.Text = $"{response.Weather?.CurrentTemp.ToString()}°F";
+                    FeelsLikeStat.Text = $"{response.Weather?.FeelsLikeTemp.ToString()}°F";
+                    MaxTempStat.Text = $"{response.Weather?.MaxTemp.ToString()}°F";
+                    MinTempStat.Text = $"{response.Weather?.MinTemp.ToString()}°F";
+                }
 
                 WindSpeedStat.Text = $"{response.Wind?.WindSpeed.ToString()}m/s";
 
@@ -71,7 +92,6 @@ namespace WeatherApp
                 CountryStat.Text = response.Country?.Name;
                 return;
             }
-
             MessageBox.Show("Empty data");
         }
     }
