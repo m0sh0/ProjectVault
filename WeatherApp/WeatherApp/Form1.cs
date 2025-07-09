@@ -40,12 +40,10 @@ namespace WeatherApp
                 MessageBox.Show("Please enter a city name.");
                 return;
             }
-                
-            
 
             Response? response = await WeatherService.GetWeatherAsync(input);
 
-           PrintInfo(response, input);
+            PrintInfo(response, input);
         }
 
         private void label2_Click(object sender, EventArgs e)
@@ -88,11 +86,17 @@ namespace WeatherApp
 
                 WindSpeedStat.Text = $"{response.Wind?.WindSpeed.ToString()}m/s";
 
-                CityStat.Text = input;
+                NameLbl.Text = input;
+
                 CountryStat.Text = response.Country?.Name;
                 return;
             }
             MessageBox.Show("Empty data");
+        }
+
+        private void InputLbl_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
