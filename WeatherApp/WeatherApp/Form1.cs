@@ -73,7 +73,7 @@ namespace WeatherApp
         public void PrintInfo(Response? response, string input)
         {
 
-            if (response != null)
+            if (response != null && response.Weather != null)
             {
                 if (!WeatherService.Fahrenheit)
                 {
@@ -97,6 +97,7 @@ namespace WeatherApp
                 CountryStat.Text = response.Country?.Name;
                 return;
             }
+
             MessageBox.Show("Empty data");
         }
 
