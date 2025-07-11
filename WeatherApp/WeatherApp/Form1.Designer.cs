@@ -55,6 +55,7 @@
             WindSpeedStat = new Label();
             FahrenheitCheck = new CheckBox();
             CelsiusCheck = new CheckBox();
+            HumiPageButton = new Button();
             SuspendLayout();
             // 
             // TitleLbl
@@ -63,14 +64,14 @@
             TitleLbl.BackColor = Color.Transparent;
             TitleLbl.Font = new Font("Bahnschrift SemiBold Condensed", 72F, FontStyle.Bold, GraphicsUnit.Point, 0);
             TitleLbl.ForeColor = Color.LightSlateGray;
-            TitleLbl.Location = new Point(258, 12);
+            TitleLbl.Location = new Point(171, 30);
             TitleLbl.Margin = new Padding(0);
             TitleLbl.MaximumSize = new Size(11429, 13333);
             TitleLbl.Name = "TitleLbl";
-            TitleLbl.Size = new Size(555, 144);
+            TitleLbl.Size = new Size(713, 144);
             TitleLbl.TabIndex = 0;
             TitleLbl.Tag = "TitleLbl";
-            TitleLbl.Text = "Weather app";
+            TitleLbl.Text = "Current Weather";
             TitleLbl.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // InputLbl
@@ -345,7 +346,7 @@
             CountryStat.BackColor = Color.LightSlateGray;
             CountryStat.Font = new Font("Bahnschrift Condensed", 22.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
             CountryStat.ForeColor = Color.AliceBlue;
-            CountryStat.Location = new Point(596, 395);
+            CountryStat.Location = new Point(595, 395);
             CountryStat.Name = "CountryStat";
             CountryStat.Size = new Size(0, 45);
             CountryStat.TabIndex = 22;
@@ -393,12 +394,23 @@
             CelsiusCheck.UseVisualStyleBackColor = true;
             CelsiusCheck.CheckedChanged += checkBox1_CheckedChanged_1;
             // 
+            // HumiPageButton
+            // 
+            HumiPageButton.Location = new Point(901, 380);
+            HumiPageButton.Name = "HumiPageButton";
+            HumiPageButton.Size = new Size(94, 29);
+            HumiPageButton.TabIndex = 27;
+            HumiPageButton.Text = "button1";
+            HumiPageButton.UseVisualStyleBackColor = true;
+            HumiPageButton.Click += HumiPageButton_Click;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.AliceBlue;
             ClientSize = new Size(1055, 692);
+            Controls.Add(HumiPageButton);
             Controls.Add(CelsiusCheck);
             Controls.Add(FahrenheitCheck);
             Controls.Add(WindSpeedStat);
@@ -429,7 +441,6 @@
             Margin = new Padding(3, 4, 3, 4);
             Name = "Form1";
             StartPosition = FormStartPosition.CenterScreen;
-            Text = "h";
             Load += Form1_Load;
             ResumeLayout(false);
             PerformLayout();
@@ -463,5 +474,6 @@
         private Label WindSpeedStat;
         private CheckBox FahrenheitCheck;
         private CheckBox CelsiusCheck;
+        private Button HumiPageButton;
     }
 }

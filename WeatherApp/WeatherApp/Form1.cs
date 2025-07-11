@@ -1,14 +1,19 @@
 using System.Diagnostics;
 using WeatherApp.Classes.Models;
 using WeatherApp.Classes.Services;
+using WeatherApp.Tabs;
 
 namespace WeatherApp
 {
     public partial class Form1 : Form
     {
+        public bool IsHumiOpen { get; set; }
+        public HumidityPage HumidityPage { get; set; }
+
         public Form1()
         {
             InitializeComponent();
+            HumidityPage = new();
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -96,6 +101,21 @@ namespace WeatherApp
 
         private void InputLbl_TextChanged(object sender, EventArgs e)
         {
+
+        }
+
+        private void HumiPageButton_Click(object sender, EventArgs e)
+        {
+            if (IsHumiOpen)
+            {
+                Controls.Remove(HumidityPage);
+                IsHumiOpen = false;
+                return;
+            }
+
+            Controls.Add(HumidityPage);
+            HumidityPage.BringToFront();
+            IsHumiOpen = true;
 
         }
     }
