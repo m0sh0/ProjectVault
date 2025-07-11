@@ -295,9 +295,9 @@
             CurrentTempStat.Font = new Font("Bahnschrift Condensed", 24F, FontStyle.Regular, GraphicsUnit.Point, 0);
             CurrentTempStat.ForeColor = Color.AliceBlue;
             CurrentTempStat.Location = new Point(333, 399);
-            CurrentTempStat.MaximumSize = new Size(106, 50);
+            CurrentTempStat.MaximumSize = new Size(126, 48);
             CurrentTempStat.Name = "CurrentTempStat";
-            CurrentTempStat.Size = new Size(106, 48);
+            CurrentTempStat.Size = new Size(126, 48);
             CurrentTempStat.TabIndex = 18;
             CurrentTempStat.TextAlign = ContentAlignment.MiddleCenter;
             // 
@@ -307,9 +307,9 @@
             MaxTempStat.Font = new Font("Bahnschrift Condensed", 24F, FontStyle.Regular, GraphicsUnit.Point, 0);
             MaxTempStat.ForeColor = Color.AliceBlue;
             MaxTempStat.Location = new Point(291, 467);
-            MaxTempStat.MaximumSize = new Size(106, 50);
+            MaxTempStat.MaximumSize = new Size(148, 48);
             MaxTempStat.Name = "MaxTempStat";
-            MaxTempStat.Size = new Size(106, 48);
+            MaxTempStat.Size = new Size(148, 48);
             MaxTempStat.TabIndex = 19;
             MaxTempStat.TextAlign = ContentAlignment.MiddleCenter;
             // 
@@ -319,9 +319,9 @@
             MinTempStat.Font = new Font("Bahnschrift Condensed", 24F, FontStyle.Regular, GraphicsUnit.Point, 0);
             MinTempStat.ForeColor = Color.AliceBlue;
             MinTempStat.Location = new Point(282, 531);
-            MinTempStat.MaximumSize = new Size(106, 50);
+            MinTempStat.MaximumSize = new Size(148, 48);
             MinTempStat.Name = "MinTempStat";
-            MinTempStat.Size = new Size(106, 48);
+            MinTempStat.Size = new Size(148, 48);
             MinTempStat.TabIndex = 20;
             MinTempStat.TextAlign = ContentAlignment.MiddleCenter;
             // 
@@ -331,8 +331,9 @@
             FeelsLikeStat.Font = new Font("Bahnschrift Condensed", 24F, FontStyle.Regular, GraphicsUnit.Point, 0);
             FeelsLikeStat.ForeColor = Color.AliceBlue;
             FeelsLikeStat.Location = new Point(330, 601);
+            FeelsLikeStat.MaximumSize = new Size(148, 48);
             FeelsLikeStat.Name = "FeelsLikeStat";
-            FeelsLikeStat.Size = new Size(109, 48);
+            FeelsLikeStat.Size = new Size(126, 48);
             FeelsLikeStat.TabIndex = 21;
             FeelsLikeStat.TextAlign = ContentAlignment.MiddleCenter;
             // 
