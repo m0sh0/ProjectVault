@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using WeatherApp.Classes.Models;
 
 namespace WeatherApp.Tabs
 {
@@ -15,6 +16,13 @@ namespace WeatherApp.Tabs
         public HumidityPage()
         {
             InitializeComponent();
+        }
+
+        public void UpdateStats(Response? response)
+        {
+            AirHumiStat.Text = $"{response.Weather.Humidity}%";
+            PressureStat.Text = $"{response.Weather.Pressure} hPa";
+            SeaLvlStat.Text = $"{response.Weather.SeaLevel} m";
         }
     }
 }

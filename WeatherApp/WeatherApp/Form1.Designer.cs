@@ -291,76 +291,70 @@
             // 
             // CurrentTempStat
             // 
-            CurrentTempStat.AutoSize = true;
             CurrentTempStat.BackColor = Color.LightSlateGray;
             CurrentTempStat.Font = new Font("Bahnschrift Condensed", 24F, FontStyle.Regular, GraphicsUnit.Point, 0);
             CurrentTempStat.ForeColor = Color.AliceBlue;
             CurrentTempStat.Location = new Point(333, 399);
             CurrentTempStat.MaximumSize = new Size(106, 50);
             CurrentTempStat.Name = "CurrentTempStat";
-            CurrentTempStat.Size = new Size(0, 48);
+            CurrentTempStat.Size = new Size(106, 48);
             CurrentTempStat.TabIndex = 18;
-            CurrentTempStat.TextAlign = ContentAlignment.MiddleLeft;
+            CurrentTempStat.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // MaxTempStat
             // 
-            MaxTempStat.AutoSize = true;
             MaxTempStat.BackColor = Color.LightSlateGray;
             MaxTempStat.Font = new Font("Bahnschrift Condensed", 24F, FontStyle.Regular, GraphicsUnit.Point, 0);
             MaxTempStat.ForeColor = Color.AliceBlue;
             MaxTempStat.Location = new Point(291, 467);
             MaxTempStat.MaximumSize = new Size(106, 50);
             MaxTempStat.Name = "MaxTempStat";
-            MaxTempStat.Size = new Size(0, 48);
+            MaxTempStat.Size = new Size(106, 48);
             MaxTempStat.TabIndex = 19;
-            MaxTempStat.TextAlign = ContentAlignment.MiddleLeft;
+            MaxTempStat.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // MinTempStat
             // 
-            MinTempStat.AutoSize = true;
             MinTempStat.BackColor = Color.LightSlateGray;
             MinTempStat.Font = new Font("Bahnschrift Condensed", 24F, FontStyle.Regular, GraphicsUnit.Point, 0);
             MinTempStat.ForeColor = Color.AliceBlue;
             MinTempStat.Location = new Point(282, 531);
             MinTempStat.MaximumSize = new Size(106, 50);
             MinTempStat.Name = "MinTempStat";
-            MinTempStat.Size = new Size(0, 48);
+            MinTempStat.Size = new Size(106, 48);
             MinTempStat.TabIndex = 20;
-            MinTempStat.TextAlign = ContentAlignment.MiddleLeft;
+            MinTempStat.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // FeelsLikeStat
             // 
-            FeelsLikeStat.AutoSize = true;
             FeelsLikeStat.BackColor = Color.LightSlateGray;
             FeelsLikeStat.Font = new Font("Bahnschrift Condensed", 24F, FontStyle.Regular, GraphicsUnit.Point, 0);
             FeelsLikeStat.ForeColor = Color.AliceBlue;
             FeelsLikeStat.Location = new Point(330, 601);
             FeelsLikeStat.Name = "FeelsLikeStat";
-            FeelsLikeStat.Size = new Size(0, 48);
+            FeelsLikeStat.Size = new Size(109, 48);
             FeelsLikeStat.TabIndex = 21;
-            FeelsLikeStat.TextAlign = ContentAlignment.MiddleLeft;
+            FeelsLikeStat.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // CountryStat
             // 
-            CountryStat.AutoSize = true;
             CountryStat.BackColor = Color.LightSlateGray;
             CountryStat.Font = new Font("Bahnschrift Condensed", 22.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
             CountryStat.ForeColor = Color.AliceBlue;
             CountryStat.Location = new Point(595, 395);
             CountryStat.Name = "CountryStat";
-            CountryStat.Size = new Size(0, 45);
+            CountryStat.Size = new Size(53, 45);
             CountryStat.TabIndex = 22;
             CountryStat.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // WindSpeedStat
             // 
-            WindSpeedStat.AutoSize = true;
             WindSpeedStat.BackColor = Color.LightSlateGray;
             WindSpeedStat.Font = new Font("Bahnschrift Condensed", 24F, FontStyle.Regular, GraphicsUnit.Point, 0);
             WindSpeedStat.ForeColor = Color.AliceBlue;
-            WindSpeedStat.Location = new Point(632, 547);
+            WindSpeedStat.Location = new Point(647, 547);
             WindSpeedStat.Name = "WindSpeedStat";
-            WindSpeedStat.Size = new Size(0, 48);
+            WindSpeedStat.Size = new Size(172, 48);
             WindSpeedStat.TabIndex = 23;
             WindSpeedStat.TextAlign = ContentAlignment.MiddleCenter;
             // 
@@ -396,11 +390,14 @@
             // 
             // HumiPageButton
             // 
-            HumiPageButton.Location = new Point(901, 380);
+            HumiPageButton.FlatStyle = FlatStyle.Flat;
+            HumiPageButton.Font = new Font("Bahnschrift Condensed", 15F);
+            HumiPageButton.ForeColor = Color.LightSlateGray;
+            HumiPageButton.Location = new Point(941, 380);
             HumiPageButton.Name = "HumiPageButton";
-            HumiPageButton.Size = new Size(94, 29);
+            HumiPageButton.Size = new Size(115, 71);
             HumiPageButton.TabIndex = 27;
-            HumiPageButton.Text = "button1";
+            HumiPageButton.Text = "Other statistics";
             HumiPageButton.UseVisualStyleBackColor = true;
             HumiPageButton.Click += HumiPageButton_Click;
             // 

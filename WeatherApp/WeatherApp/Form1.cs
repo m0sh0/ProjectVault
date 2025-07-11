@@ -49,6 +49,7 @@ namespace WeatherApp
             Response? response = await WeatherService.GetWeatherAsync(input);
 
             PrintInfo(response, input);
+            HumidityPage.UpdateStats(response);
         }
 
         private void label2_Click(object sender, EventArgs e)
@@ -116,7 +117,6 @@ namespace WeatherApp
             Controls.Add(HumidityPage);
             HumidityPage.BringToFront();
             IsHumiOpen = true;
-
         }
     }
 }

@@ -32,10 +32,10 @@
             AirHumiStat = new Label();
             AirHumiLbl = new Label();
             panel2 = new Panel();
-            label1 = new Label();
+            PressureStat = new Label();
             PressureLbl = new Label();
             panel3 = new Panel();
-            label3 = new Label();
+            SeaLvlStat = new Label();
             label4 = new Label();
             panel1.SuspendLayout();
             panel2.SuspendLayout();
@@ -55,15 +55,13 @@
             // 
             // AirHumiStat
             // 
-            AirHumiStat.AutoSize = true;
             AirHumiStat.FlatStyle = FlatStyle.Flat;
             AirHumiStat.Font = new Font("Bahnschrift Light SemiCondensed", 27F);
             AirHumiStat.ForeColor = Color.AliceBlue;
-            AirHumiStat.Location = new Point(114, 119);
+            AirHumiStat.Location = new Point(66, 117);
             AirHumiStat.Name = "AirHumiStat";
-            AirHumiStat.Size = new Size(236, 54);
+            AirHumiStat.Size = new Size(326, 54);
             AirHumiStat.TabIndex = 1;
-            AirHumiStat.Text = "Air humidity";
             AirHumiStat.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // AirHumiLbl
@@ -82,26 +80,24 @@
             // 
             panel2.Anchor = AnchorStyles.None;
             panel2.BackColor = Color.LightSlateGray;
-            panel2.Controls.Add(label1);
+            panel2.Controls.Add(PressureStat);
             panel2.Controls.Add(PressureLbl);
             panel2.Location = new Point(49, 242);
             panel2.Name = "panel2";
             panel2.Size = new Size(471, 199);
             panel2.TabIndex = 2;
             // 
-            // label1
+            // PressureStat
             // 
-            label1.Anchor = AnchorStyles.Top;
-            label1.AutoSize = true;
-            label1.FlatStyle = FlatStyle.Flat;
-            label1.Font = new Font("Bahnschrift Light SemiCondensed", 27F);
-            label1.ForeColor = Color.AliceBlue;
-            label1.Location = new Point(136, 123);
-            label1.Name = "label1";
-            label1.Size = new Size(182, 54);
-            label1.TabIndex = 1;
-            label1.Text = "Pressure";
-            label1.TextAlign = ContentAlignment.MiddleCenter;
+            PressureStat.Anchor = AnchorStyles.Top;
+            PressureStat.FlatStyle = FlatStyle.Flat;
+            PressureStat.Font = new Font("Bahnschrift Light SemiCondensed", 27F);
+            PressureStat.ForeColor = Color.AliceBlue;
+            PressureStat.Location = new Point(66, 126);
+            PressureStat.Name = "PressureStat";
+            PressureStat.Size = new Size(350, 54);
+            PressureStat.TabIndex = 1;
+            PressureStat.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // PressureLbl
             // 
@@ -119,25 +115,23 @@
             // 
             panel3.Anchor = AnchorStyles.None;
             panel3.BackColor = Color.LightSlateGray;
-            panel3.Controls.Add(label3);
+            panel3.Controls.Add(SeaLvlStat);
             panel3.Controls.Add(label4);
             panel3.Location = new Point(49, 447);
             panel3.Name = "panel3";
             panel3.Size = new Size(471, 199);
             panel3.TabIndex = 3;
             // 
-            // label3
+            // SeaLvlStat
             // 
-            label3.AutoSize = true;
-            label3.FlatStyle = FlatStyle.Flat;
-            label3.Font = new Font("Bahnschrift Light SemiCondensed", 27F);
-            label3.ForeColor = Color.AliceBlue;
-            label3.Location = new Point(136, 124);
-            label3.Name = "label3";
-            label3.Size = new Size(185, 54);
-            label3.TabIndex = 1;
-            label3.Text = "Sea level";
-            label3.TextAlign = ContentAlignment.MiddleCenter;
+            SeaLvlStat.FlatStyle = FlatStyle.Flat;
+            SeaLvlStat.Font = new Font("Bahnschrift Light SemiCondensed", 27F);
+            SeaLvlStat.ForeColor = Color.AliceBlue;
+            SeaLvlStat.Location = new Point(98, 130);
+            SeaLvlStat.Name = "SeaLvlStat";
+            SeaLvlStat.Size = new Size(294, 54);
+            SeaLvlStat.TabIndex = 1;
+            SeaLvlStat.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // label4
             // 
@@ -176,10 +170,10 @@
         private Label AirHumiLbl;
         private Label AirHumiStat;
         private Panel panel2;
-        private Label label1;
+        private Label PressureStat;
         private Label PressureLbl;
         private Panel panel3;
-        private Label label3;
+        private Label SeaLvlStat;
         private Label label4;
     }
 }
