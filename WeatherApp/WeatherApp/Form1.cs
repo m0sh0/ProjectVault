@@ -72,6 +72,7 @@ namespace WeatherApp
         //TODO: Localize
         public void PrintInfo(Response? response, string input)
         {
+
             try
             {
                 if (!WeatherService.Fahrenheit)
@@ -94,36 +95,14 @@ namespace WeatherApp
                 NameLbl.Text = input;
 
                 CountryStat.Text = response.Country?.Name;
-                //if (response != null && response.Weather != null)
-                //{
-                //    if (!WeatherService.Fahrenheit)
-                //    {
-                //        CurrentTempStat.Text = $"{response.Weather?.CurrentTemp.ToString()}°C";
-                //        FeelsLikeStat.Text = $"{response.Weather?.FeelsLikeTemp.ToString()}°C";
-                //        MaxTempStat.Text = $"{response.Weather?.MaxTemp.ToString()}°C";
-                //        MinTempStat.Text = $"{response.Weather?.MinTemp.ToString()}°C";
-                //    }
-                //    else
-                //    {
-                //        CurrentTempStat.Text = $"{response.Weather?.CurrentTemp.ToString()}°F";
-                //        FeelsLikeStat.Text = $"{response.Weather?.FeelsLikeTemp.ToString()}°F";
-                //        MaxTempStat.Text = $"{response.Weather?.MaxTemp.ToString()}°F";
-                //        MinTempStat.Text = $"{response.Weather?.MinTemp.ToString()}°F";
-                //    }
-
-                //    WindSpeedStat.Text = $"{response.Wind?.WindSpeed.ToString()}m/s";
-
-                //    NameLbl.Text = input;
-
-                //    CountryStat.Text = response.Country?.Name;
-                //}
             }
+            // Catch any exceptions that occur during the data retrieval or processing
             catch (NullReferenceException e)
             {
                 MessageBox.Show(e.Message);
                 throw;
             }
-            
+
         }
 
         private void InputLbl_TextChanged(object sender, EventArgs e)

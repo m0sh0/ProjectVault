@@ -20,18 +20,14 @@ namespace WeatherApp.Tabs
 
         public void UpdateStats(Response? response)
         {
-            try
+            if (response != null)
             {
                 AirHumiStat.Text = $"{response.Weather.Humidity}%";
                 PressureStat.Text = $"{response.Weather.Pressure} hPa";
                 SeaLvlStat.Text = $"{response.Weather.SeaLevel} m";
             }
-            catch (NullReferenceException e)
-            {
-                Console.WriteLine(e);
-                throw;
-            }
-
+            else
+                MessageBox.Show("Response is null. Please check the data source.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
     }
 }
