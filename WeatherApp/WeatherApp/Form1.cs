@@ -72,8 +72,7 @@ namespace WeatherApp
         //TODO: Localize
         public void PrintInfo(Response? response, string input)
         {
-
-            if (response != null && response.Weather != null)
+            try
             {
                 if (!WeatherService.Fahrenheit)
                 {
@@ -95,10 +94,36 @@ namespace WeatherApp
                 NameLbl.Text = input;
 
                 CountryStat.Text = response.Country?.Name;
-                return;
-            }
+                //if (response != null && response.Weather != null)
+                //{
+                //    if (!WeatherService.Fahrenheit)
+                //    {
+                //        CurrentTempStat.Text = $"{response.Weather?.CurrentTemp.ToString()}°C";
+                //        FeelsLikeStat.Text = $"{response.Weather?.FeelsLikeTemp.ToString()}°C";
+                //        MaxTempStat.Text = $"{response.Weather?.MaxTemp.ToString()}°C";
+                //        MinTempStat.Text = $"{response.Weather?.MinTemp.ToString()}°C";
+                //    }
+                //    else
+                //    {
+                //        CurrentTempStat.Text = $"{response.Weather?.CurrentTemp.ToString()}°F";
+                //        FeelsLikeStat.Text = $"{response.Weather?.FeelsLikeTemp.ToString()}°F";
+                //        MaxTempStat.Text = $"{response.Weather?.MaxTemp.ToString()}°F";
+                //        MinTempStat.Text = $"{response.Weather?.MinTemp.ToString()}°F";
+                //    }
 
-            MessageBox.Show("Empty data");
+                //    WindSpeedStat.Text = $"{response.Wind?.WindSpeed.ToString()}m/s";
+
+                //    NameLbl.Text = input;
+
+                //    CountryStat.Text = response.Country?.Name;
+                //}
+            }
+            catch (NullReferenceException e)
+            {
+                MessageBox.Show(e.Message);
+                throw;
+            }
+            
         }
 
         private void InputLbl_TextChanged(object sender, EventArgs e)

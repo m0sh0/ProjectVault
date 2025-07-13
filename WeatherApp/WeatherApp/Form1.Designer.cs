@@ -64,11 +64,11 @@
             TitleLbl.BackColor = Color.Transparent;
             TitleLbl.Font = new Font("Bahnschrift SemiBold Condensed", 72F, FontStyle.Bold, GraphicsUnit.Point, 0);
             TitleLbl.ForeColor = Color.LightSlateGray;
-            TitleLbl.Location = new Point(171, 30);
+            TitleLbl.Location = new Point(150, 22);
             TitleLbl.Margin = new Padding(0);
-            TitleLbl.MaximumSize = new Size(11429, 13333);
+            TitleLbl.MaximumSize = new Size(10000, 10000);
             TitleLbl.Name = "TitleLbl";
-            TitleLbl.Size = new Size(713, 144);
+            TitleLbl.Size = new Size(569, 115);
             TitleLbl.TabIndex = 0;
             TitleLbl.Tag = "TitleLbl";
             TitleLbl.Text = "Current Weather";
@@ -82,11 +82,10 @@
             InputLbl.Cursor = Cursors.IBeam;
             InputLbl.Font = new Font("Bahnschrift Condensed", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
             InputLbl.ForeColor = Color.LightSlateGray;
-            InputLbl.Location = new Point(363, 228);
-            InputLbl.Margin = new Padding(3, 4, 3, 4);
+            InputLbl.Location = new Point(318, 171);
             InputLbl.Name = "InputLbl";
             InputLbl.PlaceholderText = "City name";
-            InputLbl.Size = new Size(208, 39);
+            InputLbl.Size = new Size(182, 33);
             InputLbl.TabIndex = 1;
             // 
             // HintLbl
@@ -95,11 +94,11 @@
             HintLbl.BackColor = Color.Transparent;
             HintLbl.Font = new Font("Bahnschrift Light Condensed", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             HintLbl.ForeColor = Color.LightSlateGray;
-            HintLbl.Location = new Point(362, 276);
+            HintLbl.Location = new Point(317, 207);
             HintLbl.Margin = new Padding(0);
-            HintLbl.MaximumSize = new Size(11429, 13333);
+            HintLbl.MaximumSize = new Size(10000, 10000);
             HintLbl.Name = "HintLbl";
-            HintLbl.Size = new Size(291, 29);
+            HintLbl.Size = new Size(230, 23);
             HintLbl.TabIndex = 2;
             HintLbl.Tag = "TitleLbl";
             HintLbl.Text = "Enter city name to see the weather";
@@ -111,10 +110,9 @@
             SearchBtn.FlatStyle = FlatStyle.Flat;
             SearchBtn.ForeColor = Color.White;
             SearchBtn.Image = (Image)resources.GetObject("SearchBtn.Image");
-            SearchBtn.Location = new Point(629, 223);
-            SearchBtn.Margin = new Padding(3, 4, 3, 4);
+            SearchBtn.Location = new Point(550, 167);
             SearchBtn.Name = "SearchBtn";
-            SearchBtn.Size = new Size(53, 59);
+            SearchBtn.Size = new Size(46, 44);
             SearchBtn.TabIndex = 3;
             SearchBtn.UseVisualStyleBackColor = false;
             SearchBtn.Click += SearchBtn_Click;
@@ -125,10 +123,9 @@
             CloseBtn.FlatStyle = FlatStyle.Flat;
             CloseBtn.ForeColor = Color.AliceBlue;
             CloseBtn.Image = (Image)resources.GetObject("CloseBtn.Image");
-            CloseBtn.Location = new Point(919, 16);
-            CloseBtn.Margin = new Padding(3, 4, 3, 4);
+            CloseBtn.Location = new Point(804, 12);
             CloseBtn.Name = "CloseBtn";
-            CloseBtn.Size = new Size(43, 53);
+            CloseBtn.Size = new Size(38, 40);
             CloseBtn.TabIndex = 4;
             CloseBtn.UseVisualStyleBackColor = false;
             CloseBtn.Click += CloseBtn_Click;
@@ -139,10 +136,9 @@
             CloseButton.FlatStyle = FlatStyle.Flat;
             CloseButton.ForeColor = Color.AliceBlue;
             CloseButton.Image = Properties.Resources.CloseButton;
-            CloseButton.Location = new Point(969, 16);
-            CloseButton.Margin = new Padding(3, 4, 3, 4);
+            CloseButton.Location = new Point(848, 12);
             CloseButton.Name = "CloseButton";
-            CloseButton.Size = new Size(43, 53);
+            CloseButton.Size = new Size(38, 40);
             CloseButton.TabIndex = 5;
             CloseButton.UseVisualStyleBackColor = false;
             CloseButton.Click += CloseButton_Click;
@@ -153,10 +149,9 @@
             ClearBtn.FlatStyle = FlatStyle.Flat;
             ClearBtn.Font = new Font("Bahnschrift Condensed", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             ClearBtn.ForeColor = SystemColors.Control;
-            ClearBtn.Location = new Point(574, 228);
-            ClearBtn.Margin = new Padding(3, 4, 3, 4);
+            ClearBtn.Location = new Point(502, 171);
             ClearBtn.Name = "ClearBtn";
-            ClearBtn.Size = new Size(37, 44);
+            ClearBtn.Size = new Size(32, 33);
             ClearBtn.TabIndex = 6;
             ClearBtn.Text = "X";
             ClearBtn.UseVisualStyleBackColor = false;
@@ -165,9 +160,9 @@
             // TempBox
             // 
             TempBox.BackColor = Color.LightSlateGray;
-            TempBox.Location = new Point(162, 379);
+            TempBox.Location = new Point(142, 284);
             TempBox.Name = "TempBox";
-            TempBox.Size = new Size(299, 305);
+            TempBox.Size = new Size(262, 229);
             TempBox.TabIndex = 7;
             TempBox.TextAlign = ContentAlignment.MiddleCenter;
             // 
@@ -177,9 +172,9 @@
             MaxTempLbl.BackColor = Color.LightSlateGray;
             MaxTempLbl.Font = new Font("Bahnschrift Condensed", 24F, FontStyle.Regular, GraphicsUnit.Point, 0);
             MaxTempLbl.ForeColor = Color.AliceBlue;
-            MaxTempLbl.Location = new Point(172, 467);
+            MaxTempLbl.Location = new Point(150, 350);
             MaxTempLbl.Name = "MaxTempLbl";
-            MaxTempLbl.Size = new Size(119, 48);
+            MaxTempLbl.Size = new Size(95, 39);
             MaxTempLbl.TabIndex = 8;
             MaxTempLbl.Text = "Max t° :";
             MaxTempLbl.TextAlign = ContentAlignment.MiddleCenter;
@@ -190,9 +185,9 @@
             MinTempLbl.BackColor = Color.LightSlateGray;
             MinTempLbl.Font = new Font("Bahnschrift Condensed", 24F, FontStyle.Regular, GraphicsUnit.Point, 0);
             MinTempLbl.ForeColor = Color.AliceBlue;
-            MinTempLbl.Location = new Point(172, 531);
+            MinTempLbl.Location = new Point(150, 398);
             MinTempLbl.Name = "MinTempLbl";
-            MinTempLbl.Size = new Size(112, 48);
+            MinTempLbl.Size = new Size(88, 39);
             MinTempLbl.TabIndex = 9;
             MinTempLbl.Text = "Min t° :";
             MinTempLbl.TextAlign = ContentAlignment.MiddleCenter;
@@ -203,9 +198,9 @@
             CurrentTempLbl.BackColor = Color.LightSlateGray;
             CurrentTempLbl.Font = new Font("Bahnschrift Condensed", 24F, FontStyle.Regular, GraphicsUnit.Point, 0);
             CurrentTempLbl.ForeColor = Color.AliceBlue;
-            CurrentTempLbl.Location = new Point(171, 399);
+            CurrentTempLbl.Location = new Point(150, 299);
             CurrentTempLbl.Name = "CurrentTempLbl";
-            CurrentTempLbl.Size = new Size(168, 48);
+            CurrentTempLbl.Size = new Size(131, 39);
             CurrentTempLbl.TabIndex = 10;
             CurrentTempLbl.Text = "Current t° :";
             CurrentTempLbl.TextAlign = ContentAlignment.MiddleCenter;
@@ -216,9 +211,9 @@
             FeelsLikeLbl.BackColor = Color.LightSlateGray;
             FeelsLikeLbl.Font = new Font("Bahnschrift Condensed", 24F, FontStyle.Regular, GraphicsUnit.Point, 0);
             FeelsLikeLbl.ForeColor = Color.AliceBlue;
-            FeelsLikeLbl.Location = new Point(169, 601);
+            FeelsLikeLbl.Location = new Point(148, 451);
             FeelsLikeLbl.Name = "FeelsLikeLbl";
-            FeelsLikeLbl.Size = new Size(162, 48);
+            FeelsLikeLbl.Size = new Size(130, 39);
             FeelsLikeLbl.TabIndex = 11;
             FeelsLikeLbl.Text = "Feels like :";
             FeelsLikeLbl.TextAlign = ContentAlignment.MiddleCenter;
@@ -226,9 +221,9 @@
             // label1
             // 
             label1.BackColor = Color.LightSlateGray;
-            label1.Location = new Point(465, 380);
+            label1.Location = new Point(407, 285);
             label1.Name = "label1";
-            label1.Size = new Size(183, 71);
+            label1.Size = new Size(160, 53);
             label1.TabIndex = 12;
             label1.TextAlign = ContentAlignment.MiddleCenter;
             // 
@@ -238,9 +233,9 @@
             CountruLbl.BackColor = Color.LightSlateGray;
             CountruLbl.Font = new Font("Bahnschrift Condensed", 24F, FontStyle.Regular, GraphicsUnit.Point, 0);
             CountruLbl.ForeColor = Color.AliceBlue;
-            CountruLbl.Location = new Point(469, 391);
+            CountruLbl.Location = new Point(410, 293);
             CountruLbl.Name = "CountruLbl";
-            CountruLbl.Size = new Size(139, 48);
+            CountruLbl.Size = new Size(109, 39);
             CountruLbl.TabIndex = 13;
             CountruLbl.Text = "Country :";
             CountruLbl.TextAlign = ContentAlignment.MiddleCenter;
@@ -248,9 +243,9 @@
             // label2
             // 
             label2.BackColor = Color.LightSlateGray;
-            label2.Location = new Point(466, 466);
+            label2.Location = new Point(408, 350);
             label2.Name = "label2";
-            label2.Size = new Size(390, 217);
+            label2.Size = new Size(341, 163);
             label2.TabIndex = 14;
             label2.TextAlign = ContentAlignment.MiddleCenter;
             // 
@@ -260,9 +255,9 @@
             WindSpeedLbl.BackColor = Color.LightSlateGray;
             WindSpeedLbl.Font = new Font("Bahnschrift Condensed", 24F, FontStyle.Regular, GraphicsUnit.Point, 0);
             WindSpeedLbl.ForeColor = Color.AliceBlue;
-            WindSpeedLbl.Location = new Point(471, 547);
+            WindSpeedLbl.Location = new Point(412, 410);
             WindSpeedLbl.Name = "WindSpeedLbl";
-            WindSpeedLbl.Size = new Size(185, 48);
+            WindSpeedLbl.Size = new Size(148, 39);
             WindSpeedLbl.TabIndex = 15;
             WindSpeedLbl.Text = "Wind speed :";
             WindSpeedLbl.TextAlign = ContentAlignment.MiddleCenter;
@@ -270,9 +265,9 @@
             // label3
             // 
             label3.BackColor = Color.LightSlateGray;
-            label3.Location = new Point(655, 380);
+            label3.Location = new Point(573, 285);
             label3.Name = "label3";
-            label3.Size = new Size(203, 71);
+            label3.Size = new Size(178, 53);
             label3.TabIndex = 16;
             label3.TextAlign = ContentAlignment.MiddleCenter;
             // 
@@ -282,9 +277,9 @@
             NameLbl.BackColor = Color.LightSlateGray;
             NameLbl.Font = new Font("Bahnschrift Condensed", 24F, FontStyle.Regular, GraphicsUnit.Point, 0);
             NameLbl.ForeColor = Color.AliceBlue;
-            NameLbl.Location = new Point(702, 392);
+            NameLbl.Location = new Point(614, 294);
             NameLbl.Name = "NameLbl";
-            NameLbl.Size = new Size(95, 48);
+            NameLbl.Size = new Size(77, 39);
             NameLbl.TabIndex = 17;
             NameLbl.Text = "Name";
             NameLbl.TextAlign = ContentAlignment.MiddleCenter;
@@ -294,10 +289,10 @@
             CurrentTempStat.BackColor = Color.LightSlateGray;
             CurrentTempStat.Font = new Font("Bahnschrift Condensed", 24F, FontStyle.Regular, GraphicsUnit.Point, 0);
             CurrentTempStat.ForeColor = Color.AliceBlue;
-            CurrentTempStat.Location = new Point(333, 399);
-            CurrentTempStat.MaximumSize = new Size(126, 48);
+            CurrentTempStat.Location = new Point(291, 299);
+            CurrentTempStat.MaximumSize = new Size(110, 36);
             CurrentTempStat.Name = "CurrentTempStat";
-            CurrentTempStat.Size = new Size(126, 48);
+            CurrentTempStat.Size = new Size(110, 36);
             CurrentTempStat.TabIndex = 18;
             CurrentTempStat.TextAlign = ContentAlignment.MiddleCenter;
             // 
@@ -306,10 +301,10 @@
             MaxTempStat.BackColor = Color.LightSlateGray;
             MaxTempStat.Font = new Font("Bahnschrift Condensed", 24F, FontStyle.Regular, GraphicsUnit.Point, 0);
             MaxTempStat.ForeColor = Color.AliceBlue;
-            MaxTempStat.Location = new Point(291, 467);
-            MaxTempStat.MaximumSize = new Size(148, 48);
+            MaxTempStat.Location = new Point(255, 350);
+            MaxTempStat.MaximumSize = new Size(130, 36);
             MaxTempStat.Name = "MaxTempStat";
-            MaxTempStat.Size = new Size(148, 48);
+            MaxTempStat.Size = new Size(130, 36);
             MaxTempStat.TabIndex = 19;
             MaxTempStat.TextAlign = ContentAlignment.MiddleCenter;
             // 
@@ -318,10 +313,10 @@
             MinTempStat.BackColor = Color.LightSlateGray;
             MinTempStat.Font = new Font("Bahnschrift Condensed", 24F, FontStyle.Regular, GraphicsUnit.Point, 0);
             MinTempStat.ForeColor = Color.AliceBlue;
-            MinTempStat.Location = new Point(282, 531);
-            MinTempStat.MaximumSize = new Size(148, 48);
+            MinTempStat.Location = new Point(247, 398);
+            MinTempStat.MaximumSize = new Size(130, 36);
             MinTempStat.Name = "MinTempStat";
-            MinTempStat.Size = new Size(148, 48);
+            MinTempStat.Size = new Size(130, 36);
             MinTempStat.TabIndex = 20;
             MinTempStat.TextAlign = ContentAlignment.MiddleCenter;
             // 
@@ -330,10 +325,10 @@
             FeelsLikeStat.BackColor = Color.LightSlateGray;
             FeelsLikeStat.Font = new Font("Bahnschrift Condensed", 24F, FontStyle.Regular, GraphicsUnit.Point, 0);
             FeelsLikeStat.ForeColor = Color.AliceBlue;
-            FeelsLikeStat.Location = new Point(330, 601);
-            FeelsLikeStat.MaximumSize = new Size(148, 48);
+            FeelsLikeStat.Location = new Point(289, 451);
+            FeelsLikeStat.MaximumSize = new Size(130, 36);
             FeelsLikeStat.Name = "FeelsLikeStat";
-            FeelsLikeStat.Size = new Size(126, 48);
+            FeelsLikeStat.Size = new Size(110, 36);
             FeelsLikeStat.TabIndex = 21;
             FeelsLikeStat.TextAlign = ContentAlignment.MiddleCenter;
             // 
@@ -342,9 +337,9 @@
             CountryStat.BackColor = Color.LightSlateGray;
             CountryStat.Font = new Font("Bahnschrift Condensed", 22.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
             CountryStat.ForeColor = Color.AliceBlue;
-            CountryStat.Location = new Point(595, 395);
+            CountryStat.Location = new Point(521, 296);
             CountryStat.Name = "CountryStat";
-            CountryStat.Size = new Size(53, 45);
+            CountryStat.Size = new Size(46, 34);
             CountryStat.TabIndex = 22;
             CountryStat.TextAlign = ContentAlignment.MiddleCenter;
             // 
@@ -353,9 +348,9 @@
             WindSpeedStat.BackColor = Color.LightSlateGray;
             WindSpeedStat.Font = new Font("Bahnschrift Condensed", 24F, FontStyle.Regular, GraphicsUnit.Point, 0);
             WindSpeedStat.ForeColor = Color.AliceBlue;
-            WindSpeedStat.Location = new Point(647, 547);
+            WindSpeedStat.Location = new Point(566, 410);
             WindSpeedStat.Name = "WindSpeedStat";
-            WindSpeedStat.Size = new Size(172, 48);
+            WindSpeedStat.Size = new Size(150, 36);
             WindSpeedStat.TabIndex = 23;
             WindSpeedStat.TextAlign = ContentAlignment.MiddleCenter;
             // 
@@ -364,10 +359,9 @@
             FahrenheitCheck.AutoSize = true;
             FahrenheitCheck.Font = new Font("Bahnschrift Condensed", 26.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             FahrenheitCheck.ForeColor = Color.LightSlateGray;
-            FahrenheitCheck.Location = new Point(48, 12);
-            FahrenheitCheck.Margin = new Padding(3, 4, 3, 4);
+            FahrenheitCheck.Location = new Point(42, 9);
             FahrenheitCheck.Name = "FahrenheitCheck";
-            FahrenheitCheck.Size = new Size(73, 57);
+            FahrenheitCheck.Size = new Size(60, 46);
             FahrenheitCheck.TabIndex = 25;
             FahrenheitCheck.Text = "F°";
             FahrenheitCheck.UseVisualStyleBackColor = true;
@@ -380,10 +374,9 @@
             CelsiusCheck.CheckState = CheckState.Checked;
             CelsiusCheck.Font = new Font("Bahnschrift Condensed", 26.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             CelsiusCheck.ForeColor = Color.LightSlateGray;
-            CelsiusCheck.Location = new Point(48, 81);
-            CelsiusCheck.Margin = new Padding(3, 4, 3, 4);
+            CelsiusCheck.Location = new Point(42, 61);
             CelsiusCheck.Name = "CelsiusCheck";
-            CelsiusCheck.Size = new Size(75, 57);
+            CelsiusCheck.Size = new Size(62, 46);
             CelsiusCheck.TabIndex = 26;
             CelsiusCheck.Text = "C°";
             CelsiusCheck.UseVisualStyleBackColor = true;
@@ -394,9 +387,10 @@
             HumiPageButton.FlatStyle = FlatStyle.Flat;
             HumiPageButton.Font = new Font("Bahnschrift Condensed", 15F);
             HumiPageButton.ForeColor = Color.LightSlateGray;
-            HumiPageButton.Location = new Point(941, 380);
+            HumiPageButton.Location = new Point(823, 289);
+            HumiPageButton.Margin = new Padding(3, 2, 3, 2);
             HumiPageButton.Name = "HumiPageButton";
-            HumiPageButton.Size = new Size(115, 71);
+            HumiPageButton.Size = new Size(101, 39);
             HumiPageButton.TabIndex = 27;
             HumiPageButton.Text = "Other statistics";
             HumiPageButton.UseVisualStyleBackColor = true;
@@ -404,10 +398,10 @@
             // 
             // Form1
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.AliceBlue;
-            ClientSize = new Size(1055, 692);
+            ClientSize = new Size(923, 519);
             Controls.Add(HumiPageButton);
             Controls.Add(CelsiusCheck);
             Controls.Add(FahrenheitCheck);
@@ -436,7 +430,6 @@
             Controls.Add(InputLbl);
             Controls.Add(TitleLbl);
             FormBorderStyle = FormBorderStyle.None;
-            Margin = new Padding(3, 4, 3, 4);
             Name = "Form1";
             StartPosition = FormStartPosition.CenterScreen;
             Load += Form1_Load;

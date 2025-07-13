@@ -20,9 +20,18 @@ namespace WeatherApp.Tabs
 
         public void UpdateStats(Response? response)
         {
-            AirHumiStat.Text = $"{response.Weather.Humidity}%";
-            PressureStat.Text = $"{response.Weather.Pressure} hPa";
-            SeaLvlStat.Text = $"{response.Weather.SeaLevel} m";
+            try
+            {
+                AirHumiStat.Text = $"{response.Weather.Humidity}%";
+                PressureStat.Text = $"{response.Weather.Pressure} hPa";
+                SeaLvlStat.Text = $"{response.Weather.SeaLevel} m";
+            }
+            catch (NullReferenceException e)
+            {
+                Console.WriteLine(e);
+                throw;
+            }
+
         }
     }
 }
