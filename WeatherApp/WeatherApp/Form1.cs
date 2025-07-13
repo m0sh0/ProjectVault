@@ -110,6 +110,8 @@ namespace WeatherApp
 
         }
 
+        // Button click event to toggle the humidity page
+
         private void HumiPageButton_Click(object sender, EventArgs e)
         {
             if (IsHumiOpen)

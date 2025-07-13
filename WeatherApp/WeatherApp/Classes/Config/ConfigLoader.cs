@@ -35,9 +35,8 @@ namespace WeatherApp.Classes.Config
             catch (Exception e)
             {
                 Debug.WriteLine(e);
-                throw;
             }
-            
+
             throw new Exception("Failed to load connections from JSON file.");
         }
     }
