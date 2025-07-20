@@ -35,6 +35,7 @@ namespace WeatherApp.Classes.Services
                 HttpResponseMessage response = await client.GetAsync(url);
                 response.EnsureSuccessStatusCode(); // Ensure the request was successful
 
+<<<<<<< Updated upstream
                 string jsonResponse = await response.Content.ReadAsStringAsync();
                 return JsonSerializer.Deserialize<Response?>(jsonResponse);
             }
@@ -45,6 +46,14 @@ namespace WeatherApp.Classes.Services
                 throw;
             }
             
+=======
+            HttpClient client = new();
+            HttpResponseMessage response = await client.GetAsync(url);
+
+            string jsonResponse = await response.Content.ReadAsStringAsync();
+
+            return JsonSerializer.Deserialize<Response?>(jsonResponse);
+>>>>>>> Stashed changes
         }
     }
 }
