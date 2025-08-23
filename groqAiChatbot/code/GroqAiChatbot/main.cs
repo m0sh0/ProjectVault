@@ -4,10 +4,10 @@ using System.Text;
 using System.Threading.Tasks;
 using Newtonsoft.Json;
 
-class Program
+class main
 {
     private static readonly HttpClient client = new HttpClient();
-    private const string apiKey = "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";
+    private const string apiKey = "sdasdad";
     private const string apiUrl = "https://api.groq.com/openai/v1/chat/completions";
 
     static async Task<string> GetAIResponse(string userInput)
@@ -16,7 +16,7 @@ class Program
         {
             model = "llama3-8b-8192",
             messages = new[] { new { role = "user", content = userInput } },
-            temperature = 0.7,
+            temperature = 1,
             max_tokens = 150
         };
 
@@ -60,14 +60,14 @@ class Program
             Console.Write("\nYou: ");
             string userInput = Console.ReadLine();
 
-            if (userInput.ToLower() == "exit" || userInput.ToLower() == "quit")
+            if (userInput.ToLower() == "exit")
             {
                 Console.WriteLine("\nGoodbye!");
                 break;
             }
 
             string response = await GetAIResponse(userInput);
-            Console.WriteLine("AI: " + response);
+            Console.WriteLine($"AI: {response}");
         }
     }
 }

@@ -10,6 +10,17 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ignore", "ignore", "{B335BB
 		.gitignore = .gitignore
 	EndProjectSection
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Classes", "Classes", "{00E7E134-1652-4BB7-A141-68BF22857405}"
+	ProjectSection(SolutionItems) = preProject
+		ConnectionLoader.cs = ConnectionLoader.cs
+		Connections.cs = Connections.cs
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "JSON", "JSON", "{A1263B31-B5D8-4461-9390-1331F6AC6130}"
+	ProjectSection(SolutionItems) = preProject
+		Connections.json = Connections.json
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
