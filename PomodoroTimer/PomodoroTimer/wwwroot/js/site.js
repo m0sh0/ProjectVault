@@ -4,8 +4,8 @@ let seconds = 0;
 let timer = null;
 
 // variables for the default time
-let defaultMinutes = 25;
-let defaultSeconds = 0;
+let defaultMinutes = 0;
+let defaultSeconds =5;
 
 // variables for the break
 let breakCount = 0;
