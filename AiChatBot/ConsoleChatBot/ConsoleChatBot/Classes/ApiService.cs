@@ -14,6 +14,7 @@ public static class ApiService
         HttpClient client = new();
         string apiKey = ConnectionLoader.LoadConnection(1);
         
+        
         var requestData = new
         {
             model = "llama3-8b-8192",
@@ -35,15 +36,16 @@ public static class ApiService
             if (!response.IsSuccessStatusCode)
                 return $"API Error: {response.StatusCode} - {responseString}";
             
+            var jsonResponse = JsonConvert.DeserializeObject<dynamic>(responseString);
             
+            if(jsonResponse == null || jsonResponse.choices == null || jsonResponse.choices.Count == 0)
+                return "Error no valid response from API.";
             
+            return jsonResponse.choices[0].content;
         }
         catch (Exception e)
         {
-            Console.WriteLine(e);
-            throw;
+            return $"Error {e.Message}";
         }
-        
-        return null;
     }
 }
