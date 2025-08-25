@@ -34,6 +34,8 @@ public static class ApiService
             var response = await client.PostAsync(url, content);
             string responseString = await response.Content.ReadAsStringAsync();
 
+            Console.WriteLine($"Response:\n {responseString}");
+
             if (!response.IsSuccessStatusCode)
                 return $"API Error: {response.StatusCode} - {responseString}";
             
@@ -48,5 +50,6 @@ public static class ApiService
         {
             return $"Error {e.Message}";
         }
+        
     }
 }

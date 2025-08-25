@@ -1,10 +1,12 @@
-﻿namespace ConsoleChatBot
+﻿using ConsoleChatBot.Classes;
+
+namespace ConsoleChatBot
 {
     internal class MainBody
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello, World!");
+            ApiService.Get(ConnectionLoader.LoadConnection(0), "Hello!");
         }
     }
 }
