@@ -9,12 +9,12 @@ namespace ConsoleChatBot.Classes
 {
     public static class ConnectionLoader
     {
-        public static string LoadConnection(int connectionNumber)
+        public static string LoadConnection()
         {
             try
             {
                 string connectionPath = 
-                    Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "JSON", "Connections.json");
+                    Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "JSON", "ConnectionsUrl.json");
 
                 string jsonContent = File.ReadAllText(connectionPath);
 
@@ -22,12 +22,9 @@ namespace ConsoleChatBot.Classes
                     System.Text.Json.JsonSerializer.Deserialize<Connections>(jsonContent);
                 // Check if connection is not null
                 if (connection != null)
-                    // Return url or key based on connectionNumber
-                    switch (connectionNumber)
-                    {
-                        case 0: return connection.Url;
-                        case 1: return connection.Key;
-                    }
+                    // Return url
+                    return connection.Url;
+
             }
             // Catch any exceptions and write to debug
             catch (Exception e)
@@ -36,6 +33,17 @@ namespace ConsoleChatBot.Classes
             }
             // If we reach here, something went wrong
             throw new Exception("Failed to load url from json");
+        }
+
+        public static string LoadApiKey()
+        {
+            string? apiKey = Environment.GetEnvironmentVariable("GROQ_API_KEY");
+            
+            if (!string.IsNullOrEmpty(apiKey))
+                return apiKey;
+
+            return "Wrong variable name or no variable assigned.";
+            
         }
     }
 }

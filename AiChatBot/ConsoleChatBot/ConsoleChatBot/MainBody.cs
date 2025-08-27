@@ -5,19 +5,18 @@ namespace ConsoleChatBot
 {
     internal class MainBody
     {
-        static void Main(string[] args)
+        static async Task Main(string[] args)
         {
-            var path = Directory.GetCurrentDirectory();
-            var path1 = AppDomain.CurrentDomain.BaseDirectory;
-            //var path = Path.Combine(AppDomain.CurrentDomain.BaseDirectory,"Connections.json");
-            //var path = "/home/misho/RiderProjects/ProjectVault/AiChatBot/ConsoleChatBot/ConsoleChatBot/JSON/Connections.json";
+            string url = ConnectionLoader.LoadConnection();
+            var path = Path.Combine(AppDomain.CurrentDomain.BaseDirectory,"JSON","ConnectionsUrl.json");
             
-            var content = File.ReadAllText(path, Encoding.UTF8);
+            string content = File.ReadAllText(path, Encoding.UTF8);
 
             Console.WriteLine(content);
+            string response = await ApiService.Get(url, "Hello how are you?");
+            Console.WriteLine(response);
             
-            
-            ApiService.Get(ConnectionLoader.LoadConnection(0), "Hello!");
+
         }
     }
 }

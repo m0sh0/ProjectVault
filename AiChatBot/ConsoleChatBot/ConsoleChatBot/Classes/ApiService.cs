@@ -12,7 +12,7 @@ public static class ApiService
     {
         // Create the needed connections
         HttpClient client = new();
-        string apiKey = ConnectionLoader.LoadConnection(1);
+        string apiKey = ConnectionLoader.LoadApiKey();
         
         // Generate the request data 
         var requestData = new
@@ -33,8 +33,7 @@ public static class ApiService
         {
             var response = await client.PostAsync(url, content);
             string responseString = await response.Content.ReadAsStringAsync();
-
-            Console.WriteLine($"Response:\n {responseString}");
+            
 
             if (!response.IsSuccessStatusCode)
                 return $"API Error: {response.StatusCode} - {responseString}";
@@ -44,7 +43,7 @@ public static class ApiService
             if (jsonResponse == null || jsonResponse.choices == null || jsonResponse.choices.Count == 0)
                 return "Error no valid response from API.";
             
-            return jsonResponse.choices[0].content;
+            return jsonResponse.choices[0].message.content.ToString();
         }
         catch (Exception e)
         {
