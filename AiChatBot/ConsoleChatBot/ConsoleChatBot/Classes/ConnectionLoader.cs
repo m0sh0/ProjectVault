@@ -4,12 +4,14 @@ using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Newtonsoft.Json;
+
 
 namespace ConsoleChatBot.Classes
 {
     public static class ConnectionLoader
     {
-        public static string LoadConnection()
+        public static string LoadUrl()
         {
             try
             {
@@ -19,8 +21,11 @@ namespace ConsoleChatBot.Classes
                 string jsonContent = File.ReadAllText(connectionPath);
 
                 Connections? connection = 
-                    System.Text.Json.JsonSerializer.Deserialize<Connections>(jsonContent);
+                    //System.Text.Json.JsonSerializer.Deserialize<Connections>(jsonContent);
+                    JsonConvert.DeserializeObject<Connections>(jsonContent);
+                
                 // Check if connection is not null
+                
                 if (connection != null)
                     // Return url
                     return connection.Url;
