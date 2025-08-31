@@ -15,10 +15,10 @@ namespace ConsoleChatBot
             //string content = File.ReadAllText(path, Encoding.UTF8);
 
             //Console.WriteLine(content);
-            
-            string response = await ApiService.GetCode(url, "how to check if a number is odd or even in python?");
-            string response2 = await ApiService.Get(url, "how long is the empire state building?");
-            Console.WriteLine(response);
+            string input = Console.ReadLine();
+            //string response = await ApiService.GetCode(url, input);
+            string response2 = await ApiService.GetCode(url, input);
+            //Console.WriteLine(response);
             Console.WriteLine(response2);
             
             
