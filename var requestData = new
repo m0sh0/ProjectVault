@@ -1,0 +1,139 @@
+[33m41f5d32[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m Added ebv variable and getting response
+[33mbecfe60[m fixed the problem
+[33md8b2bbe[m Need to figure out how to find json path
+[33m88139f3[m safety commit
+[33ma2a5ba4[m Doing some test work
+[33ma216aeb[m I think its good for now
+[33m1568854[m Finished the service class
+[33m7a252cf[m Added Service class
+[33m948445a[m Update Connections.cs
+[33m1b13353[m Added classes
+[33meae7fd8[m Merge remote-tracking branch 'origin/main'
+[33m7e6ab79[m ,;
+[33meb20814[m Making som changes on refactoring
+[33m8ae0600[m Update WeatherService.cs
+[33m3f7dca2[m a
+[33m37b8257[m Added more checks
+[33mcaa8af2[m handle exceptions
+[33mf84ebfe[m Update Form1.cs
+[33mf2db1f5[m Update Form1.Designer.cs
+[33mcac125b[m Added funtionality
+[33m5d95991[m Added popup humidity
+[33ma2c85de[m a
+[33m32d658f[m Added Fahrenheit
+[33m68c64c6[m Flexible file path
+[33m6894bbc[m jk
+[33m63a307d[m Beuty tweaks
+[33m38ff47e[m Added Response
+[33m17ec697[m Update Program.cs
+[33mb0ee871[m added UI
+[33m13f509c[m safety commt
+[33me258581[m initial commit
+[33mb0180aa[m Create README.md
+[33mccdb4fe[m Create README.md
+[33mdf3d132[m Update README.md
+[33m3ce5c7d[m Update README.md
+[33m4a39d73[m Update README.md
+[33m05d70ce[m Create README.md
+[33mb40c7ea[m Create Ceonnection.json.example
+[33md8980ae[m Removed Connections.json from tracking
+[33mee57b80[m Merge branch 'main' of https://github.com/m0sh0/ProjectVault
+[33m7b000aa[m Create Connections.json
+[33m019723a[m Removed Connections.json from tracking
+[33m182d233[m Update .gitignore
+[33m1d4ebd3[m Added fetching from api
+[33mbb873d7[m added basic sorting logic
+[33m13da373[m cleaned up the sorting function
+[33mfe0d629[m sorting logic
+[33m59b6f67[m Merge pull request #3 from m0sh0/delete-function
+[33mf544930[m[33m ([m[1;31morigin/delete-function[m[33m)[m little updates
+[33m9f55c68[m added delete logic
+[33m28a82bb[m added button
+[33mfe9be15[m Merge pull request #2 from m0sh0/update-function
+[33m8b27e47[m[33m ([m[1;31morigin/update-function[m[33m)[m added comments
+[33m3b84a73[m automated showing the grid and added update function
+[33mb77cd14[m Update DataBaseHelper.cs
+[33mdd952fa[m added update logic
+[33mdb255cb[m a updated the whole table
+[33m65eaab5[m changed some logic
+[33m9814c6f[m a
+[33mf2924ee[m commit
+[33m8c97ebb[m safety commit
+[33m6d71223[m added some logic
+[33m25162a4[m added the new page
+[33md8a1f75[m Update ShowTable.xaml.cs
+[33m89cdb79[m Update ShowTable.xaml.cs
+[33m611adb4[m Update site.js
+[33m63ce5f6[m Update InsertWindow.xaml.cs
+[33m566a8e0[m Merge pull request #1 from m0sh0/Insert-game-window
+[33ma5aa45e[m Update InsertWindow.xaml.cs
+[33me5567a1[m Completed logic for inserting
+[33m2d126ee[m added insert logic
+[33m0bbe528[m Adding logic for insrting
+[33me7664aa[m added insert button
+[33mefd9baf[m added input field
+[33mee5d98f[m Update InsertWindow.xaml
+[33m5f23024[m added window
+[33me418893[m Update ShowTable.xaml.cs
+[33me724d78[m Remove appsettings.json from version control
+[33mdc27034[m Merge branch 'main' of https://github.com/m0sh0/ProjectVault
+[33m0ba6070[m Update .gitignore
+[33mc65deda[m updates
+[33ma26ba7d[m added async function to "Show table" button
+[33m85e3f7d[m Update MainWindow.xaml.cs
+[33me1cdbeb[m Added database connection
+[33m157a78f[m Update MainWindow.xaml
+[33mf8653ba[m Merge branch 'main' of https://github.com/m0sh0/ProjectVault
+[33m2ac3071[m Added menu bar
+[33m5885d06[m a
+[33m1d940bc[m cleaned up a little
+[33m78d5e4b[m added db folder
+[33mb761069[m added blank project
+[33m96ed8a6[m Create database.sql
+[33me24e529[m Update site.js
+[33m53419d9[m Update site.js
+[33mad110b6[m Update site.js
+[33md74ed3b[m long break added
+[33med17a06[m new version
+[33m7d27d00[m added underline and rectangle
+[33mccde029[m Added
+[33m937ba08[m Merge branch 'main' of https://github.com/m0sh0/ProjectVault
+[33m0e4b28e[m updated the method to a return type
+[33m195caeb[m Update README.md
+[33m7865157[m Create README.md
+[33m26c60a3[m Delete MessagefromSpace/ConsoleApp1 directory
+[33mb17da48[m Update Program.cs
+[33mfcea6d1[m completed
+[33m983991c[m Merge branch 'main' of https://github.com/m0sh0/ProjectVault
+[33mb81e40b[m added comments
+[33m4701c9c[m Update README.md
+[33mb8ce6d4[m Create README.md
+[33mf4f9dfa[m Update Program.cs
+[33mff6738c[m finally made it work!!!
+[33mf69da55[m i got working stuff bby
+[33ma640f6e[m not working at all
+[33mb92b1f5[m third commit
+[33m333c540[m second commit
+[33m69c2f35[m first commit
+[33md140cb8[m Merge branch 'main' of https://github.com/m0sh0/ProjectVault
+[33ma96cacb[m Update Program.cs
+[33m532dc7c[m Delete C#PatternDrawingProject/Test directory
+[33m62561ed[m removed test
+[33md9b57a6[m Added functions
+[33m18613b6[m Merge branch 'main' of https://github.com/m0sh0/ProjectVault
+[33m8198303[m first commit
+[33mece2e0a[m Delete BridgeShuffleTwoArrays directory
+[33m9071f97[m Delete C#PatternDrawingProject directory
+[33m7f8c32e[m Delete NumberGuessingGame directory
+[33m5b9edd3[m Delete ToDoList directory
+[33m3001fbd[m Delete TurnCalculator directory
+[33mb2875aa[m Delete groqAiChatbot/code directory
+[33ma263485[m Update README.md
+[33mbf5d12d[m Update README.md
+[33m6f33d75[m Update README.md
+[33m9a899aa[m Update README.md
+[33m519f226[m updated readme
+[33mb008bdb[m Add files via upload
+[33mf39d128[m Add files via upload
+[33m4d28de1[m Add files via upload
+[33m58d7652[m Initial commit
