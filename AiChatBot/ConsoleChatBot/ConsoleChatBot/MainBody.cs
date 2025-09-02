@@ -6,32 +6,20 @@ namespace ConsoleChatBot
 {
     internal class MainBody
     {
+        // You can play around with the capabilities. This is just a demo :)
         static async Task Main(string[] args)
         {
             string url = ConnectionLoader.LoadUrl();
             
-            //var path = Path.Combine(AppDomain.CurrentDomain.BaseDirectory,"JSON","ConnectionsUrl.json");
+            string chatString = Console.ReadLine();
+            string response = await ApiService.GetChat(url, chatString);
             
-            //string content = File.ReadAllText(path, Encoding.UTF8);
-
-            //Console.WriteLine(content);
-            string input = Console.ReadLine();
-            //string response = await ApiService.GetCode(url, input);
-            string response2 = await ApiService.GetCode(url, input);
-            //Console.WriteLine(response);
+            string codeString = Console.ReadLine();
+            string response2 = await ApiService.GetCode(url, codeString);
+            
+            Console.WriteLine(response);
             Console.WriteLine(response2);
             
-            
-
-            //string url = ConnectionLoader.LoadUrl();
-            //
-            //string input = Console.ReadLine();
-//
-            //string apiResponse = await ApiService.GetCode(url, input);
-//
-            //Console.WriteLine(apiResponse);
-
-
         }
     }
 }

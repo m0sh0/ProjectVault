@@ -11,6 +11,7 @@ namespace ConsoleChatBot.Classes
 {
     public static class ConnectionLoader
     {
+        // Loads the URL grom the ConnectionsUrl.json file, located in the JSON folder in the project
         public static string LoadUrl()
         {
             try
@@ -21,11 +22,9 @@ namespace ConsoleChatBot.Classes
                 string jsonContent = File.ReadAllText(connectionPath);
 
                 Connections? connection = 
-                    //System.Text.Json.JsonSerializer.Deserialize<Connections>(jsonContent);
                     JsonConvert.DeserializeObject<Connections>(jsonContent);
                 
                 // Check if connection is not null
-                
                 if (connection != null)
                     // Return url
                     return connection.Url;
@@ -40,6 +39,7 @@ namespace ConsoleChatBot.Classes
             throw new Exception("Failed to load url from json");
         }
 
+        //  Reads the api key grom the environment varible GROQ_API_KEY
         public static string LoadApiKey()
         {
             string? apiKey = Environment.GetEnvironmentVariable("GROQ_API_KEY");
