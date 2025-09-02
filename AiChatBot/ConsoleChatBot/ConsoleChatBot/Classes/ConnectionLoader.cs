@@ -39,7 +39,7 @@ namespace ConsoleChatBot.Classes
             throw new Exception("Failed to load url from json");
         }
 
-        //  Reads the api key grom the environment varible GROQ_API_KEY
+        //  Reads the api key from the environment variable GROQ_API_KEY
         public static string LoadApiKey()
         {
             string? apiKey = Environment.GetEnvironmentVariable("GROQ_API_KEY");
