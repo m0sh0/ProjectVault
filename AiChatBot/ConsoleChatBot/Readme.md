@@ -49,10 +49,10 @@ class Program
         string url = ConnectionLoader.LoadUrl();
 
         var response = await ApiService.GetChat(url, "Hello! Can you tell me a fun fact?");
-        Console.WriteLine("Chat response:\n" + response);
+        Console.WriteLine($"Chat response:\n{codeResponse}");
 
         var codeResponse = await ApiService.GetCode(url, "Write a simple C# Hello World program");
-        Console.WriteLine("Code response:\n" + codeResponse);
+        Console.WriteLine($"Code response:\n{codeResponse");
     }
 }
 ```
